@@ -112,3 +112,12 @@ class Collection<T> {
 
   final String? name;
 }
+
+/// A document that only exists to contain subcollections.
+class EmptyDoc {
+  // ignore: avoid_unused_constructor_parameters
+  factory EmptyDoc.fromJson(Map<String, dynamic> json) =>
+      throw UnimplementedError();
+
+  Map<String, dynamic> toJson() => throw UnimplementedError();
+}
