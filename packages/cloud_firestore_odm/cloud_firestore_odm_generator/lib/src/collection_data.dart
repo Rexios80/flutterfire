@@ -348,7 +348,7 @@ represents the content of the collection must be in the same file.
         type.isDartCoreInt ||
         type.isDartCoreDouble ||
         type.isDartCoreBool ||
-        type.isPrimitiveList ||
+        type.isPrimitiveIterable ||
         type.isJsonDocumentReference ||
         type.isEnum ||
         dateTimeChecker.isAssignableFromType(type) ||
@@ -445,7 +445,7 @@ extension on String {
   }
 }
 
-extension on DartType {
+extension DartTypeExtension on DartType {
   bool get isJsonDocumentReference {
     return element?.librarySource?.uri.scheme == 'package' &&
         const {'cloud_firestore'}
@@ -454,8 +454,11 @@ extension on DartType {
         (this as InterfaceType).typeArguments.single.isDartCoreMap;
   }
 
-  bool get isPrimitiveList {
-    if (!isDartCoreList) return false;
+  bool get isIterable =>
+      (this as InterfaceType).allSupertypes.any((e) => e.isDartCoreIterable);
+
+  bool get isPrimitiveIterable {
+    if (!isIterable) return false;
 
     final generic = (this as InterfaceType).typeArguments.single;
 
