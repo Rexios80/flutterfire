@@ -105,7 +105,7 @@ void transactionUpdate(Transaction transaction, {${parameters.join()}});
 
     String parameterMapping(QueryingField field) {
       final String name;
-      if (field.type.isIterable) {
+      if (field.type.isSupportedIterable) {
         name = '(${field.name} as Iterable)';
       } else {
         name = field.name;
