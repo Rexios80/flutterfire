@@ -389,7 +389,7 @@ class ${data.queryReferenceImplName}
         'isGreaterThan': (nullableType, field.parameterMapping),
         'isGreaterThanOrEqualTo': (nullableType, field.parameterMapping),
         'isNull': ('bool?', null),
-        if (field.type.isIterable) ...{
+        if (field.type.isSupportedIterable) ...{
           'arrayContains': (
             data.libraryElement.typeProvider
                 .asNullable((field.type as InterfaceType).typeArguments.first)
