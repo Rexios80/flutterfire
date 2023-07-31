@@ -3,7 +3,6 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import '../collection_data.dart';
-import '../collection_generator.dart';
 
 class DocumentReferenceTemplate {
   DocumentReferenceTemplate(this.data);
@@ -103,24 +102,12 @@ void transactionUpdate(Transaction transaction, {${parameters.join()}});
       ]
     ];
 
-    String parameterMapping(QueryingField field) {
-      // TODO: Update to `isIterable` when the PR for that lands
-      final String name;
-      if (field.type.isDartCoreList) {
-        name = '(${field.name} as List)';
-      } else {
-        name = field.name;
-      }
-      return field.parameterMapping?.call(name, false) ??
-          '${field.name} as ${field.type}';
-    }
-
     // TODO support nested objects
     final json = [
       for (final field in data.updatableFields) ...[
         '''
         if (${field.name} != _sentinel)
-          ${field.field}: ${parameterMapping(field)},
+          ${field.field}: _\$${data.type.getDisplayString(withNullability: false)}PerFieldToJson.${field.name}(${field.name} as ${field.type}),
         ''',
         '''
         if (${field.name}FieldValue != null)

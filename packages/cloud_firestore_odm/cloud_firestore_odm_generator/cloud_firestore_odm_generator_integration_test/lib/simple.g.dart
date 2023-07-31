@@ -12353,6 +12353,37 @@ const _$NestedFieldMap = <String, String>{
   'nullableEnumList': 'nullableEnumList',
 };
 
+// ignore: unused_element
+abstract class _$NestedPerFieldToJson {
+  // ignore: unused_element
+  static Object? value(Nested? instance) => instance;
+  // ignore: unused_element
+  static Object? simple(int? instance) => instance;
+  // ignore: unused_element
+  static Object? valueList(List<Nested>? instance) => instance;
+  // ignore: unused_element
+  static Object? boolList(List<bool>? instance) => instance;
+  // ignore: unused_element
+  static Object? stringList(List<String>? instance) => instance;
+  // ignore: unused_element
+  static Object? numList(List<num>? instance) => instance;
+  // ignore: unused_element
+  static Object? objectList(List<Object?>? instance) => instance;
+  // ignore: unused_element
+  static Object? dynamicList(List<dynamic>? instance) => instance;
+  // ignore: unused_element
+  static Object? enumValue(TestEnum instance) => _$TestEnumEnumMap[instance]!;
+  // ignore: unused_element
+  static Object? nullableEnumValue(TestEnum? instance) =>
+      _$TestEnumEnumMap[instance];
+  // ignore: unused_element
+  static Object? enumList(List<TestEnum> instance) =>
+      instance.map((e) => _$TestEnumEnumMap[e]!).toList();
+  // ignore: unused_element
+  static Object? nullableEnumList(List<TestEnum>? instance) =>
+      instance?.map((e) => _$TestEnumEnumMap[e]!).toList();
+}
+
 Map<String, dynamic> _$NestedToJson(Nested instance) => <String, dynamic>{
       'value': instance.value,
       'simple': instance.simple,

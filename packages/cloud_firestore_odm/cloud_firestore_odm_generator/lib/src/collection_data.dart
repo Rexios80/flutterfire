@@ -278,13 +278,7 @@ represents the content of the collection must be in the same file.
               key = '_\$${collectionTargetElement.name.public}FieldMap[$key]!';
             }
 
-            return QueryingField(
-              e.name,
-              e.type,
-              updatable: true,
-              field: key,
-              parameterMapping: _parameterMappingForType(e.type),
-            );
+            return QueryingField(e.name, e.type, updatable: true, field: key);
           },
         ).toList(),
       ],
@@ -355,30 +349,6 @@ represents the content of the collection must be in the same file.
         timestampChecker.isAssignableFromType(type) ||
         geoPointChecker.isAssignableFromType(type);
     // TODO filter list other than List<string|bool|num>
-  }
-
-  static ParameterMapping? _parameterMappingForType(DartType type) {
-    ParameterMapping enumMappingForType(DartType type) =>
-        (String name, bool nullable) {
-          final mapped =
-              '_\$${type.getDisplayString(withNullability: false)}EnumMap[$name]!';
-          if (nullable) {
-            return '$name == null ? null : $mapped';
-          } else {
-            return mapped;
-          }
-        };
-
-    if (type.isDartCoreList &&
-        type is InterfaceType &&
-        type.typeArguments.single.isEnum) {
-      final generic = type.typeArguments.single;
-      return listParameterMapping(enumMappingForType(generic));
-    } else if (type.isEnum) {
-      return enumMappingForType(type);
-    } else {
-      return null;
-    }
   }
 
   @override
