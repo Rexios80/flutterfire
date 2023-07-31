@@ -541,14 +541,12 @@ class _$DateTimeQueryQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$DateTimeQueryFieldMap['time']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -1323,14 +1321,12 @@ class _$TimestampQueryQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$TimestampQueryFieldMap['time']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -2106,14 +2102,12 @@ class _$GeoPointQueryQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$GeoPointQueryFieldMap['point']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -2899,14 +2893,12 @@ class _$DocumentReferenceQueryQuery extends QueryReference<
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$DocumentReferenceQueryFieldMap['ref']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),

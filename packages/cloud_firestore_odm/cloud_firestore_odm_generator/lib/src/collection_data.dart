@@ -276,8 +276,10 @@ represents the content of the collection must be in the same file.
             .where((f) => !f.isJsonIgnored())
             .map(
           (f) {
-            _assertValidJsonAnnotation(f.type,
-                hasPerFieldToJson: hasPerFieldToJson);
+            _assertValidJsonAnnotation(
+              f.type,
+              hasPerFieldToJson: hasPerFieldToJson,
+            );
             var key = "'${f.name}'";
 
             if (hasFreezed) {
@@ -380,6 +382,7 @@ represents the content of the collection must be in the same file.
   String mapParameter(
     QueryingField field, {
     String? parameter,
+    bool nullable = false,
     bool tearoff = false,
     bool cast = false,
     bool list = false,
@@ -398,9 +401,9 @@ represents the content of the collection must be in the same file.
     print('mapParameter $type hasFreezed: $hasFreezed');
     final perFieldToJson =
         hasFreezed ? '_\$\$_${type}PerFieldToJson' : '_\$${type}PerFieldToJson';
-    final mapping = '$perFieldToJson.${field.name}';
+    var mapping = '$perFieldToJson.${field.name}';
     if (tearoff) {
-      return mapping;
+      // Do nothing
     } else if (cast) {
       return '$mapping($parameter! as ${field.type})';
     } else if (list) {
@@ -408,6 +411,12 @@ represents the content of the collection must be in the same file.
     } else {
       return '$mapping($parameter)';
     }
+
+    if (nullable) {
+      mapping = '$parameter != null ? $mapping : null';
+    }
+
+    return mapping;
   }
 
   @override

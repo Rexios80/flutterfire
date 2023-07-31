@@ -539,14 +539,12 @@ class _$IgnoredGetterQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$IgnoredGetterFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -1305,14 +1303,12 @@ class _$ModelQuery extends QueryReference<Model, ModelQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ModelFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -2516,23 +2512,13 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['simple']!,
-        isEqualTo:
-            isEqualTo != null ? _$NestedPerFieldToJson.simple(isEqualTo) : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.simple(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.simple(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.simple(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.simple(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.simple(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.simple(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.simple(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.simple(isLessThan),
+        isLessThanOrEqualTo: _$NestedPerFieldToJson.simple(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.simple(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.simple(isGreaterThanOrEqualTo),
         isNull: isNull,
         whereIn: whereIn?.map((e) => _$NestedPerFieldToJson.simple).toList(),
         whereNotIn:
@@ -2557,28 +2543,17 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['boolList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.boolList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.boolList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.boolList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.boolList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.boolList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.boolList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.boolList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.boolList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.boolList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.boolList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.boolList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.boolList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.boolList([arrayContains]) as List?)!.first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.boolList([arrayContains]) as List?)!.first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.boolList)
             .toList(),
@@ -2602,29 +2577,18 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['stringList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.stringList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.stringList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.stringList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.stringList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.stringList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.stringList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.stringList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.stringList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.stringList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.stringList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.stringList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.stringList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.stringList([arrayContains]) as List?)!
-                .first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.stringList([arrayContains]) as List?)!
+                .first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.stringList)
             .toList(),
@@ -2648,28 +2612,17 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['numList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.numList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.numList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.numList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.numList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.numList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.numList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.numList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.numList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.numList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.numList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.numList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.numList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.numList([arrayContains]) as List?)!.first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.numList([arrayContains]) as List?)!.first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.numList)
             .toList(),
@@ -2693,29 +2646,18 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['objectList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.objectList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.objectList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.objectList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.objectList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.objectList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.objectList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.objectList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.objectList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.objectList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.objectList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.objectList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.objectList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.objectList([arrayContains]) as List?)!
-                .first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.objectList([arrayContains]) as List?)!
+                .first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.objectList)
             .toList(),
@@ -2739,29 +2681,18 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['dynamicList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.dynamicList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.dynamicList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.dynamicList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.dynamicList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.dynamicList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.dynamicList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.dynamicList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.dynamicList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.dynamicList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.dynamicList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.dynamicList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.dynamicList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.dynamicList([arrayContains]) as List?)!
-                .first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.dynamicList([arrayContains]) as List?)!
+                .first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.dynamicList)
             .toList(),
@@ -2785,24 +2716,14 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['enumValue']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.enumValue(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.enumValue(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.enumValue(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.enumValue(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.enumValue(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.enumValue(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.enumValue(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.enumValue(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.enumValue(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.enumValue(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.enumValue(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.enumValue(isGreaterThanOrEqualTo),
         isNull: isNull,
         whereIn: whereIn?.map((e) => _$NestedPerFieldToJson.enumValue).toList(),
         whereNotIn:
@@ -2827,24 +2748,14 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['nullableEnumValue']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumValue(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumValue(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.nullableEnumValue(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumValue(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.nullableEnumValue(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumValue(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.nullableEnumValue(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.nullableEnumValue(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.nullableEnumValue(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.nullableEnumValue(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.nullableEnumValue(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.nullableEnumValue(isGreaterThanOrEqualTo),
         isNull: isNull,
         whereIn: whereIn
             ?.map((e) => _$NestedPerFieldToJson.nullableEnumValue)
@@ -2872,28 +2783,17 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['enumList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.enumList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.enumList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.enumList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.enumList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.enumList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.enumList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.enumList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.enumList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.enumList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.enumList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.enumList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.enumList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.enumList([arrayContains]) as List?)!.first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.enumList([arrayContains]) as List?)!.first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.enumList)
             .toList(),
@@ -2917,30 +2817,18 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['nullableEnumList']!,
-        isEqualTo: isEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumList(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumList(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$NestedPerFieldToJson.nullableEnumList(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumList(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$NestedPerFieldToJson.nullableEnumList(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$NestedPerFieldToJson.nullableEnumList(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: _$NestedPerFieldToJson.nullableEnumList(isEqualTo),
+        isNotEqualTo: _$NestedPerFieldToJson.nullableEnumList(isNotEqualTo),
+        isLessThan: _$NestedPerFieldToJson.nullableEnumList(isLessThan),
+        isLessThanOrEqualTo:
+            _$NestedPerFieldToJson.nullableEnumList(isLessThanOrEqualTo),
+        isGreaterThan: _$NestedPerFieldToJson.nullableEnumList(isGreaterThan),
+        isGreaterThanOrEqualTo:
+            _$NestedPerFieldToJson.nullableEnumList(isGreaterThanOrEqualTo),
         isNull: isNull,
-        arrayContains: arrayContains != null
-            ? (_$NestedPerFieldToJson.nullableEnumList([arrayContains])
-                    as List?)!
-                .first
-            : null,
+        arrayContains:
+            (_$NestedPerFieldToJson.nullableEnumList([arrayContains]) as List?)!
+                .first,
         arrayContainsAny: arrayContainsAny
             ?.map((e) => _$NestedPerFieldToJson.nullableEnumList)
             .toList(),
@@ -5551,14 +5439,12 @@ class _$OptionalJsonQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$OptionalJsonFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -6322,14 +6208,12 @@ class _$MixedJsonQuery extends QueryReference<MixedJson, MixedJsonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MixedJsonFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -7171,14 +7055,12 @@ class _$RootQuery extends QueryReference<Root, RootQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$RootFieldMap['nonNullable']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -7202,14 +7084,12 @@ class _$RootQuery extends QueryReference<Root, RootQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$RootFieldMap['nullable']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -8099,14 +7979,12 @@ class _$SubQuery extends QueryReference<Sub, SubQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$SubFieldMap['nonNullable']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -8130,14 +8008,12 @@ class _$SubQuery extends QueryReference<Sub, SubQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$SubFieldMap['nullable']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -8993,14 +8869,12 @@ class _$AsCamelCaseQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$AsCamelCaseFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -9790,14 +9664,12 @@ class _$CustomSubNameQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$CustomSubNameFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -10593,14 +10465,12 @@ class _$ThisIsACustomPrefixQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$CustomClassPrefixFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -11383,14 +11253,12 @@ class _$ExplicitPathQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ExplicitPathFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -12181,14 +12049,12 @@ class _$ExplicitSubPathQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ExplicitSubPathFieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),

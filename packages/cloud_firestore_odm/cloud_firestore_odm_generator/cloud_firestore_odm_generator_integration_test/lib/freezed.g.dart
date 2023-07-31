@@ -573,14 +573,12 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$_PersonFieldMap['firstName']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -604,14 +602,12 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$_PersonFieldMap['lastName']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),
@@ -1454,14 +1450,12 @@ class _$PublicRedirectedQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$PublicRedirected2FieldMap['value']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),

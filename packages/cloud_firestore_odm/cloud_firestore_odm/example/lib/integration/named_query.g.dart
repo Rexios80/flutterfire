@@ -551,14 +551,12 @@ class _$ConflictQuery extends QueryReference<Conflict, ConflictQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ConflictFieldMap['number']!,
-        isEqualTo: isEqualTo != null ? isEqualTo : null,
-        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
-        isLessThan: isLessThan != null ? isLessThan : null,
-        isLessThanOrEqualTo:
-            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
-        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
-        isGreaterThanOrEqualTo:
-            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
+        isEqualTo: isEqualTo,
+        isNotEqualTo: isNotEqualTo,
+        isLessThan: isLessThan,
+        isLessThanOrEqualTo: isLessThanOrEqualTo,
+        isGreaterThan: isGreaterThan,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
         whereIn: whereIn?.map((e) => e).toList(),
         whereNotIn: whereNotIn?.map((e) => e).toList(),

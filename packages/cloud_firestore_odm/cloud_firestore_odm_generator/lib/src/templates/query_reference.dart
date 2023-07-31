@@ -411,9 +411,9 @@ class ${data.queryReferenceImplName}
         } else if (listParameters.contains(e)) {
           return '$e: $e?.map((e) => ${data.mapParameter(field, parameter: 'e', tearoff: true)}).toList(),';
         } else if (listedParameters.contains(e)) {
-          return '$e: $e != null ? ${data.mapParameter(field, parameter: e, list: true)} : null,';
+          return '$e: ${data.mapParameter(field, parameter: e, nullable: true, list: true)},';
         } else {
-          return '$e: $e != null ? ${data.mapParameter(field, parameter: e)} : null,';
+          return '$e: ${data.mapParameter(field, parameter: e, nullable: true)},';
         }
       }).join();
 
