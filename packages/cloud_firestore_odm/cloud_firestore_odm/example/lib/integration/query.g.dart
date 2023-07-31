@@ -186,9 +186,7 @@ class _$DateTimeQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel)
-        _$DateTimeQueryFieldMap['time']!:
-            _$DateTimeQueryPerFieldToJson.time(time! as DateTime),
+      if (time != _sentinel) _$DateTimeQueryFieldMap['time']!: time,
       if (timeFieldValue != null)
         _$DateTimeQueryFieldMap['time']!: timeFieldValue,
     };
@@ -206,9 +204,7 @@ class _$DateTimeQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel)
-        _$DateTimeQueryFieldMap['time']!:
-            _$DateTimeQueryPerFieldToJson.time(time! as DateTime),
+      if (time != _sentinel) _$DateTimeQueryFieldMap['time']!: time,
       if (timeFieldValue != null)
         _$DateTimeQueryFieldMap['time']!: timeFieldValue,
     };
@@ -545,29 +541,17 @@ class _$DateTimeQueryQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$DateTimeQueryFieldMap['time']!,
-        isEqualTo: isEqualTo != null
-            ? _$DateTimeQueryPerFieldToJson.time(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$DateTimeQueryPerFieldToJson.time(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$DateTimeQueryPerFieldToJson.time(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$DateTimeQueryPerFieldToJson.time(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$DateTimeQueryPerFieldToJson.time(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$DateTimeQueryPerFieldToJson.time(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn:
-            whereIn?.map((e) => _$DateTimeQueryPerFieldToJson.time).toList(),
-        whereNotIn:
-            whereNotIn?.map((e) => _$DateTimeQueryPerFieldToJson.time).toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -984,9 +968,7 @@ class _$TimestampQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel)
-        _$TimestampQueryFieldMap['time']!:
-            _$TimestampQueryPerFieldToJson.time(time! as Timestamp),
+      if (time != _sentinel) _$TimestampQueryFieldMap['time']!: time,
       if (timeFieldValue != null)
         _$TimestampQueryFieldMap['time']!: timeFieldValue,
     };
@@ -1004,9 +986,7 @@ class _$TimestampQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel)
-        _$TimestampQueryFieldMap['time']!:
-            _$TimestampQueryPerFieldToJson.time(time! as Timestamp),
+      if (time != _sentinel) _$TimestampQueryFieldMap['time']!: time,
       if (timeFieldValue != null)
         _$TimestampQueryFieldMap['time']!: timeFieldValue,
     };
@@ -1343,30 +1323,17 @@ class _$TimestampQueryQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$TimestampQueryFieldMap['time']!,
-        isEqualTo: isEqualTo != null
-            ? _$TimestampQueryPerFieldToJson.time(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$TimestampQueryPerFieldToJson.time(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$TimestampQueryPerFieldToJson.time(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$TimestampQueryPerFieldToJson.time(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$TimestampQueryPerFieldToJson.time(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$TimestampQueryPerFieldToJson.time(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn:
-            whereIn?.map((e) => _$TimestampQueryPerFieldToJson.time).toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$TimestampQueryPerFieldToJson.time)
-            .toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1784,9 +1751,7 @@ class _$GeoPointQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both point and pointFieldValue",
     );
     final json = {
-      if (point != _sentinel)
-        _$GeoPointQueryFieldMap['point']!:
-            _$GeoPointQueryPerFieldToJson.point(point! as GeoPoint),
+      if (point != _sentinel) _$GeoPointQueryFieldMap['point']!: point,
       if (pointFieldValue != null)
         _$GeoPointQueryFieldMap['point']!: pointFieldValue,
     };
@@ -1804,9 +1769,7 @@ class _$GeoPointQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both point and pointFieldValue",
     );
     final json = {
-      if (point != _sentinel)
-        _$GeoPointQueryFieldMap['point']!:
-            _$GeoPointQueryPerFieldToJson.point(point! as GeoPoint),
+      if (point != _sentinel) _$GeoPointQueryFieldMap['point']!: point,
       if (pointFieldValue != null)
         _$GeoPointQueryFieldMap['point']!: pointFieldValue,
     };
@@ -2143,30 +2106,17 @@ class _$GeoPointQueryQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$GeoPointQueryFieldMap['point']!,
-        isEqualTo: isEqualTo != null
-            ? _$GeoPointQueryPerFieldToJson.point(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$GeoPointQueryPerFieldToJson.point(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$GeoPointQueryPerFieldToJson.point(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$GeoPointQueryPerFieldToJson.point(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$GeoPointQueryPerFieldToJson.point(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$GeoPointQueryPerFieldToJson.point(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn:
-            whereIn?.map((e) => _$GeoPointQueryPerFieldToJson.point).toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$GeoPointQueryPerFieldToJson.point)
-            .toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2591,10 +2541,7 @@ class _$DocumentReferenceQueryDocumentReference
       "Cannot specify both ref and refFieldValue",
     );
     final json = {
-      if (ref != _sentinel)
-        _$DocumentReferenceQueryFieldMap['ref']!:
-            _$DocumentReferenceQueryPerFieldToJson
-                .ref(ref! as DocumentReference<Map<String, dynamic>>),
+      if (ref != _sentinel) _$DocumentReferenceQueryFieldMap['ref']!: ref,
       if (refFieldValue != null)
         _$DocumentReferenceQueryFieldMap['ref']!: refFieldValue,
     };
@@ -2612,10 +2559,7 @@ class _$DocumentReferenceQueryDocumentReference
       "Cannot specify both ref and refFieldValue",
     );
     final json = {
-      if (ref != _sentinel)
-        _$DocumentReferenceQueryFieldMap['ref']!:
-            _$DocumentReferenceQueryPerFieldToJson
-                .ref(ref! as DocumentReference<Map<String, dynamic>>),
+      if (ref != _sentinel) _$DocumentReferenceQueryFieldMap['ref']!: ref,
       if (refFieldValue != null)
         _$DocumentReferenceQueryFieldMap['ref']!: refFieldValue,
     };
@@ -2955,31 +2899,17 @@ class _$DocumentReferenceQueryQuery extends QueryReference<
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$DocumentReferenceQueryFieldMap['ref']!,
-        isEqualTo: isEqualTo != null
-            ? _$DocumentReferenceQueryPerFieldToJson.ref(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$DocumentReferenceQueryPerFieldToJson.ref(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$DocumentReferenceQueryPerFieldToJson.ref(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$DocumentReferenceQueryPerFieldToJson.ref(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$DocumentReferenceQueryPerFieldToJson.ref(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$DocumentReferenceQueryPerFieldToJson.ref(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$DocumentReferenceQueryPerFieldToJson.ref)
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$DocumentReferenceQueryPerFieldToJson.ref)
-            .toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -3244,13 +3174,6 @@ const _$DateTimeQueryFieldMap = <String, String>{
   'time': 'time',
 };
 
-// ignore: unused_element
-abstract class _$DateTimeQueryPerFieldToJson {
-  // ignore: unused_element
-  static Object? time(DateTime instance) =>
-      const FirestoreDateTimeConverter().toJson(instance);
-}
-
 Map<String, dynamic> _$DateTimeQueryToJson(DateTimeQuery instance) =>
     <String, dynamic>{
       'time': const FirestoreDateTimeConverter().toJson(instance.time),
@@ -3265,13 +3188,6 @@ const _$TimestampQueryFieldMap = <String, String>{
   'time': 'time',
 };
 
-// ignore: unused_element
-abstract class _$TimestampQueryPerFieldToJson {
-  // ignore: unused_element
-  static Object? time(Timestamp instance) =>
-      const FirestoreTimestampConverter().toJson(instance);
-}
-
 Map<String, dynamic> _$TimestampQueryToJson(TimestampQuery instance) =>
     <String, dynamic>{
       'time': const FirestoreTimestampConverter().toJson(instance.time),
@@ -3285,13 +3201,6 @@ GeoPointQuery _$GeoPointQueryFromJson(Map<String, dynamic> json) =>
 const _$GeoPointQueryFieldMap = <String, String>{
   'point': 'point',
 };
-
-// ignore: unused_element
-abstract class _$GeoPointQueryPerFieldToJson {
-  // ignore: unused_element
-  static Object? point(GeoPoint instance) =>
-      const FirestoreGeoPointConverter().toJson(instance);
-}
 
 Map<String, dynamic> _$GeoPointQueryToJson(GeoPointQuery instance) =>
     <String, dynamic>{
@@ -3308,13 +3217,6 @@ DocumentReferenceQuery _$DocumentReferenceQueryFromJson(
 const _$DocumentReferenceQueryFieldMap = <String, String>{
   'ref': 'ref',
 };
-
-// ignore: unused_element
-abstract class _$DocumentReferenceQueryPerFieldToJson {
-  // ignore: unused_element
-  static Object? ref(DocumentReference<Map<String, dynamic>> instance) =>
-      const FirestoreDocumentReferenceConverter().toJson(instance);
-}
 
 Map<String, dynamic> _$DocumentReferenceQueryToJson(
         DocumentReferenceQuery instance) =>

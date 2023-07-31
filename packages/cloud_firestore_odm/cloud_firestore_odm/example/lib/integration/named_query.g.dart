@@ -199,9 +199,7 @@ class _$ConflictDocumentReference
       "Cannot specify both number and numberFieldValue",
     );
     final json = {
-      if (number != _sentinel)
-        _$ConflictFieldMap['number']!:
-            _$ConflictPerFieldToJson.number(number! as num),
+      if (number != _sentinel) _$ConflictFieldMap['number']!: number,
       if (numberFieldValue != null)
         _$ConflictFieldMap['number']!: numberFieldValue,
     };
@@ -219,9 +217,7 @@ class _$ConflictDocumentReference
       "Cannot specify both number and numberFieldValue",
     );
     final json = {
-      if (number != _sentinel)
-        _$ConflictFieldMap['number']!:
-            _$ConflictPerFieldToJson.number(number! as num),
+      if (number != _sentinel) _$ConflictFieldMap['number']!: number,
       if (numberFieldValue != null)
         _$ConflictFieldMap['number']!: numberFieldValue,
     };
@@ -555,28 +551,17 @@ class _$ConflictQuery extends QueryReference<Conflict, ConflictQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ConflictFieldMap['number']!,
-        isEqualTo: isEqualTo != null
-            ? _$ConflictPerFieldToJson.number(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$ConflictPerFieldToJson.number(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$ConflictPerFieldToJson.number(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$ConflictPerFieldToJson.number(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$ConflictPerFieldToJson.number(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$ConflictPerFieldToJson.number(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => _$ConflictPerFieldToJson.number).toList(),
-        whereNotIn:
-            whereNotIn?.map((e) => _$ConflictPerFieldToJson.number).toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -831,12 +816,6 @@ Conflict _$ConflictFromJson(Map<String, dynamic> json) => Conflict(
 const _$ConflictFieldMap = <String, String>{
   'number': 'number',
 };
-
-// ignore: unused_element
-abstract class _$ConflictPerFieldToJson {
-  // ignore: unused_element
-  static Object? number(num instance) => instance;
-}
 
 Map<String, dynamic> _$ConflictToJson(Conflict instance) => <String, dynamic>{
       'number': instance.number,
