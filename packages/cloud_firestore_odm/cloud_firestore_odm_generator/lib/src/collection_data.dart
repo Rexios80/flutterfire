@@ -356,18 +356,18 @@ represents the content of the collection must be in the same file.
   String mapParameter(
     QueryingField field, {
     String? parameter,
-    bool tearoff = false,
+    // bool tearoff = false,
   }) {
     parameter ??= field.name;
     final type = this.type.getDisplayString(withNullability: false);
     final perFieldToJson =
         hasFreezed ? '_\$\$_${type}PerFieldToJson' : '_\$${type}PerFieldToJson';
     final mapping = '$perFieldToJson.${field.name}';
-    if (tearoff) {
-      return mapping;
-    } else {
+    // if (tearoff) {
+    //   return mapping;
+    // } else {
       return '$mapping($parameter! as ${field.type})';
-    }
+    // }
   }
 
   @override

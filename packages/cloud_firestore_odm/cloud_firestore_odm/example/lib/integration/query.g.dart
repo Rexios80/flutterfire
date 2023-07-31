@@ -556,9 +556,12 @@ class _$DateTimeQueryQuery
         isGreaterThanOrEqualTo: _$DateTimeQueryPerFieldToJson
             .time(isGreaterThanOrEqualTo! as DateTime),
         isNull: isNull,
-        whereIn: whereIn?.map(_$DateTimeQueryPerFieldToJson.time).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$DateTimeQueryPerFieldToJson.time).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$DateTimeQueryPerFieldToJson.time(e! as DateTime))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$DateTimeQueryPerFieldToJson.time(e! as DateTime))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1346,9 +1349,12 @@ class _$TimestampQueryQuery
         isGreaterThanOrEqualTo: _$TimestampQueryPerFieldToJson
             .time(isGreaterThanOrEqualTo! as Timestamp),
         isNull: isNull,
-        whereIn: whereIn?.map(_$TimestampQueryPerFieldToJson.time).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$TimestampQueryPerFieldToJson.time).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$TimestampQueryPerFieldToJson.time(e! as Timestamp))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$TimestampQueryPerFieldToJson.time(e! as Timestamp))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2137,9 +2143,12 @@ class _$GeoPointQueryQuery
         isGreaterThanOrEqualTo: _$GeoPointQueryPerFieldToJson
             .point(isGreaterThanOrEqualTo! as GeoPoint),
         isNull: isNull,
-        whereIn: whereIn?.map(_$GeoPointQueryPerFieldToJson.point).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$GeoPointQueryPerFieldToJson.point).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$GeoPointQueryPerFieldToJson.point(e! as GeoPoint))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$GeoPointQueryPerFieldToJson.point(e! as GeoPoint))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2941,10 +2950,13 @@ class _$DocumentReferenceQueryQuery extends QueryReference<
         isGreaterThanOrEqualTo: _$DocumentReferenceQueryPerFieldToJson.ref(
             isGreaterThanOrEqualTo! as DocumentReference<Map<String, dynamic>>),
         isNull: isNull,
-        whereIn:
-            whereIn?.map(_$DocumentReferenceQueryPerFieldToJson.ref).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$DocumentReferenceQueryPerFieldToJson
+                .ref(e! as DocumentReference<Map<String, dynamic>>))
+            .toList(),
         whereNotIn: whereNotIn
-            ?.map(_$DocumentReferenceQueryPerFieldToJson.ref)
+            ?.map((e) => _$DocumentReferenceQueryPerFieldToJson
+                .ref(e! as DocumentReference<Map<String, dynamic>>))
             .toList(),
       ),
       $queryCursor: $queryCursor,

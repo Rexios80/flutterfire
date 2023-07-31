@@ -830,8 +830,12 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$MoviePerFieldToJson.poster(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$MoviePerFieldToJson.poster).toList(),
-        whereNotIn: whereNotIn?.map(_$MoviePerFieldToJson.poster).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$MoviePerFieldToJson.poster(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$MoviePerFieldToJson.poster(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -861,8 +865,12 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$MoviePerFieldToJson.likes(isGreaterThanOrEqualTo! as int),
         isNull: isNull,
-        whereIn: whereIn?.map(_$MoviePerFieldToJson.likes).toList(),
-        whereNotIn: whereNotIn?.map(_$MoviePerFieldToJson.likes).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$MoviePerFieldToJson.likes(e! as int))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$MoviePerFieldToJson.likes(e! as int))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -892,8 +900,12 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$MoviePerFieldToJson.title(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$MoviePerFieldToJson.title).toList(),
-        whereNotIn: whereNotIn?.map(_$MoviePerFieldToJson.title).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$MoviePerFieldToJson.title(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$MoviePerFieldToJson.title(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -923,8 +935,11 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$MoviePerFieldToJson.year(isGreaterThanOrEqualTo! as int),
         isNull: isNull,
-        whereIn: whereIn?.map(_$MoviePerFieldToJson.year).toList(),
-        whereNotIn: whereNotIn?.map(_$MoviePerFieldToJson.year).toList(),
+        whereIn:
+            whereIn?.map((e) => _$MoviePerFieldToJson.year(e! as int)).toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$MoviePerFieldToJson.year(e! as int))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -954,8 +969,12 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$MoviePerFieldToJson.runtime(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$MoviePerFieldToJson.runtime).toList(),
-        whereNotIn: whereNotIn?.map(_$MoviePerFieldToJson.runtime).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$MoviePerFieldToJson.runtime(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$MoviePerFieldToJson.runtime(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -985,8 +1004,12 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$MoviePerFieldToJson.rated(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$MoviePerFieldToJson.rated).toList(),
-        whereNotIn: whereNotIn?.map(_$MoviePerFieldToJson.rated).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$MoviePerFieldToJson.rated(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$MoviePerFieldToJson.rated(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1020,8 +1043,9 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
         isNull: isNull,
         arrayContains:
             _$MoviePerFieldToJson.genre(arrayContains! as List<String>?),
-        arrayContainsAny:
-            arrayContainsAny?.map(_$MoviePerFieldToJson.genre).toList(),
+        arrayContainsAny: arrayContainsAny
+            ?.map((e) => _$MoviePerFieldToJson.genre(e! as List<String>?))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2291,9 +2315,12 @@ class _$CommentQuery extends QueryReference<Comment, CommentQuerySnapshot>
         isGreaterThanOrEqualTo: _$CommentPerFieldToJson
             .authorName(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$CommentPerFieldToJson.authorName).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$CommentPerFieldToJson.authorName).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$CommentPerFieldToJson.authorName(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$CommentPerFieldToJson.authorName(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2324,8 +2351,12 @@ class _$CommentQuery extends QueryReference<Comment, CommentQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$CommentPerFieldToJson.message(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$CommentPerFieldToJson.message).toList(),
-        whereNotIn: whereNotIn?.map(_$CommentPerFieldToJson.message).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$CommentPerFieldToJson.message(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$CommentPerFieldToJson.message(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );

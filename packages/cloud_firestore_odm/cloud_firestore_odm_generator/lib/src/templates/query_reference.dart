@@ -408,7 +408,7 @@ class ${data.queryReferenceImplName}
         if (field.name == 'documentId' || rawParameters.contains(e)) {
           return '$e: $e,';
         } else if (listParameters.contains(e)) {
-          return '$e: $e?.map(${data.mapParameter(field, parameter: e, tearoff: true)}).toList(),';
+          return '$e: $e?.map((e) => ${data.mapParameter(field, parameter: 'e')}).toList(),';
         } else {
           return '$e: ${data.mapParameter(field, parameter: e)},';
         }

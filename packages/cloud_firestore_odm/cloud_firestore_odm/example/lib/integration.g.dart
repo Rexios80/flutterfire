@@ -545,8 +545,12 @@ class _$ManualJsonQuery
         isGreaterThanOrEqualTo:
             _$ManualJsonPerFieldToJson.value(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$ManualJsonPerFieldToJson.value).toList(),
-        whereNotIn: whereNotIn?.map(_$ManualJsonPerFieldToJson.value).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$ManualJsonPerFieldToJson.value(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$ManualJsonPerFieldToJson.value(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1377,9 +1381,12 @@ class _$AdvancedJsonQuery
         isGreaterThanOrEqualTo: _$AdvancedJsonPerFieldToJson
             .firstName(isGreaterThanOrEqualTo! as String?),
         isNull: isNull,
-        whereIn: whereIn?.map(_$AdvancedJsonPerFieldToJson.firstName).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$AdvancedJsonPerFieldToJson.firstName).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$AdvancedJsonPerFieldToJson.firstName(e! as String?))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$AdvancedJsonPerFieldToJson.firstName(e! as String?))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1412,9 +1419,12 @@ class _$AdvancedJsonQuery
         isGreaterThanOrEqualTo: _$AdvancedJsonPerFieldToJson
             .lastName(isGreaterThanOrEqualTo! as String?),
         isNull: isNull,
-        whereIn: whereIn?.map(_$AdvancedJsonPerFieldToJson.lastName).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$AdvancedJsonPerFieldToJson.lastName).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$AdvancedJsonPerFieldToJson.lastName(e! as String?))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$AdvancedJsonPerFieldToJson.lastName(e! as String?))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2336,10 +2346,12 @@ class _$_PrivateAdvancedJsonQuery extends QueryReference<_PrivateAdvancedJson,
             .firstName(isGreaterThanOrEqualTo! as String?),
         isNull: isNull,
         whereIn: whereIn
-            ?.map(_$_PrivateAdvancedJsonPerFieldToJson.firstName)
+            ?.map((e) =>
+                _$_PrivateAdvancedJsonPerFieldToJson.firstName(e! as String?))
             .toList(),
         whereNotIn: whereNotIn
-            ?.map(_$_PrivateAdvancedJsonPerFieldToJson.firstName)
+            ?.map((e) =>
+                _$_PrivateAdvancedJsonPerFieldToJson.firstName(e! as String?))
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2375,10 +2387,12 @@ class _$_PrivateAdvancedJsonQuery extends QueryReference<_PrivateAdvancedJson,
             .lastName(isGreaterThanOrEqualTo! as String?),
         isNull: isNull,
         whereIn: whereIn
-            ?.map(_$_PrivateAdvancedJsonPerFieldToJson.lastName)
+            ?.map((e) =>
+                _$_PrivateAdvancedJsonPerFieldToJson.lastName(e! as String?))
             .toList(),
         whereNotIn: whereNotIn
-            ?.map(_$_PrivateAdvancedJsonPerFieldToJson.lastName)
+            ?.map((e) =>
+                _$_PrivateAdvancedJsonPerFieldToJson.lastName(e! as String?))
             .toList(),
       ),
       $queryCursor: $queryCursor,

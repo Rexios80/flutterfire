@@ -564,8 +564,12 @@ class _$ConflictQuery extends QueryReference<Conflict, ConflictQuerySnapshot>
         isGreaterThanOrEqualTo:
             _$ConflictPerFieldToJson.number(isGreaterThanOrEqualTo! as num),
         isNull: isNull,
-        whereIn: whereIn?.map(_$ConflictPerFieldToJson.number).toList(),
-        whereNotIn: whereNotIn?.map(_$ConflictPerFieldToJson.number).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$ConflictPerFieldToJson.number(e! as num))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$ConflictPerFieldToJson.number(e! as num))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );

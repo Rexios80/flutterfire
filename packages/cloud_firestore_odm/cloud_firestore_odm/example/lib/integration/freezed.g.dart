@@ -594,9 +594,12 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
         isGreaterThanOrEqualTo: _$$_PersonPerFieldToJson
             .firstName(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$$_PersonPerFieldToJson.firstName).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$$_PersonPerFieldToJson.firstName).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$$_PersonPerFieldToJson.firstName(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$$_PersonPerFieldToJson.firstName(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -628,8 +631,12 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
         isGreaterThanOrEqualTo: _$$_PersonPerFieldToJson
             .lastName(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn: whereIn?.map(_$$_PersonPerFieldToJson.lastName).toList(),
-        whereNotIn: whereNotIn?.map(_$$_PersonPerFieldToJson.lastName).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$$_PersonPerFieldToJson.lastName(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$$_PersonPerFieldToJson.lastName(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1486,10 +1493,12 @@ class _$PublicRedirectedQuery
         isGreaterThanOrEqualTo: _$$_PublicRedirectedPerFieldToJson
             .value(isGreaterThanOrEqualTo! as String),
         isNull: isNull,
-        whereIn:
-            whereIn?.map(_$$_PublicRedirectedPerFieldToJson.value).toList(),
-        whereNotIn:
-            whereNotIn?.map(_$$_PublicRedirectedPerFieldToJson.value).toList(),
+        whereIn: whereIn
+            ?.map((e) => _$$_PublicRedirectedPerFieldToJson.value(e! as String))
+            .toList(),
+        whereNotIn: whereNotIn
+            ?.map((e) => _$$_PublicRedirectedPerFieldToJson.value(e! as String))
+            .toList(),
       ),
       $queryCursor: $queryCursor,
     );
