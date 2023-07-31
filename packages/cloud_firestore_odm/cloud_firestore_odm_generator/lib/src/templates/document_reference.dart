@@ -107,7 +107,7 @@ void transactionUpdate(Transaction transaction, {${parameters.join()}});
       for (final field in data.updatableFields) ...[
         '''
         if (${field.name} != _sentinel)
-          ${field.field}: _\$${data.type.getDisplayString(withNullability: false)}PerFieldToJson.${field.name}(${field.name} as ${field.type}),
+          ${field.field}: ${data.mapParameter(field)},
         ''',
         '''
         if (${field.name}FieldValue != null)

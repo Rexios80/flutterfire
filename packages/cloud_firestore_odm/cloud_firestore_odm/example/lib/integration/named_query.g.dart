@@ -201,7 +201,7 @@ class _$ConflictDocumentReference
     final json = {
       if (number != _sentinel)
         _$ConflictFieldMap['number']!:
-            _$ConflictPerFieldToJson.number(number as num),
+            _$ConflictPerFieldToJson.number(number! as num),
       if (numberFieldValue != null)
         _$ConflictFieldMap['number']!: numberFieldValue,
     };
@@ -221,7 +221,7 @@ class _$ConflictDocumentReference
     final json = {
       if (number != _sentinel)
         _$ConflictFieldMap['number']!:
-            _$ConflictPerFieldToJson.number(number as num),
+            _$ConflictPerFieldToJson.number(number! as num),
       if (numberFieldValue != null)
         _$ConflictFieldMap['number']!: numberFieldValue,
     };
@@ -555,17 +555,17 @@ class _$ConflictQuery extends QueryReference<Conflict, ConflictQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ConflictFieldMap['number']!,
-        isEqualTo: _$ConflictPerFieldToJson.number(isEqualTo as num),
-        isNotEqualTo: _$ConflictPerFieldToJson.number(isNotEqualTo as num),
-        isLessThan: _$ConflictPerFieldToJson.number(isLessThan as num),
+        isEqualTo: _$ConflictPerFieldToJson.number(isEqualTo! as num),
+        isNotEqualTo: _$ConflictPerFieldToJson.number(isNotEqualTo! as num),
+        isLessThan: _$ConflictPerFieldToJson.number(isLessThan! as num),
         isLessThanOrEqualTo:
-            _$ConflictPerFieldToJson.number(isLessThanOrEqualTo as num),
-        isGreaterThan: _$ConflictPerFieldToJson.number(isGreaterThan as num),
+            _$ConflictPerFieldToJson.number(isLessThanOrEqualTo! as num),
+        isGreaterThan: _$ConflictPerFieldToJson.number(isGreaterThan! as num),
         isGreaterThanOrEqualTo:
-            _$ConflictPerFieldToJson.number(isGreaterThanOrEqualTo as num),
-        isNull: _$ConflictPerFieldToJson.number(isNull as num),
-        whereIn: _$ConflictPerFieldToJson.number(whereIn as num),
-        whereNotIn: _$ConflictPerFieldToJson.number(whereNotIn as num),
+            _$ConflictPerFieldToJson.number(isGreaterThanOrEqualTo! as num),
+        isNull: isNull,
+        whereIn: whereIn?.map(_$ConflictPerFieldToJson.number).toList(),
+        whereNotIn: whereNotIn?.map(_$ConflictPerFieldToJson.number).toList(),
       ),
       $queryCursor: $queryCursor,
     );

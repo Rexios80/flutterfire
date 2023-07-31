@@ -29,6 +29,7 @@ final personRef = PersonCollectionReference();
 @Collection<PublicRedirected>('freezed-test')
 @freezed
 class PublicRedirected with _$PublicRedirected {
+  @JsonSerializable(createPerFieldToJson: true)
   factory PublicRedirected({required String value}) = PublicRedirected2;
 
   factory PublicRedirected.fromJson(Map<String, Object?> json) =>

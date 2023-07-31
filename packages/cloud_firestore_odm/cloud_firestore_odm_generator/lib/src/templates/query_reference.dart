@@ -398,16 +398,19 @@ class ${data.queryReferenceImplName}
         }
       };
 
+      final rawParameters = {'isNull'};
+      final listParameters = {'arrayContainsAny', 'whereIn', 'whereNotIn'};
+
       final prototype =
           operators.entries.map((e) => '${e.value} ${e.key},').join();
 
       final parameters = operators.keys.map((e) {
-        if (field.name == 'documentId') {
-          // Don't attempt to map the documentId field since it's not actually
-          // a field in the document.
+        if (field.name == 'documentId' || rawParameters.contains(e)) {
           return '$e: $e,';
+        } else if (listParameters.contains(e)) {
+          return '$e: $e?.map(${data.mapParameter(field, parameter: e, tearoff: true)}).toList(),';
         } else {
-          return '$e: _\$${data.type.getDisplayString(withNullability: false)}PerFieldToJson.${field.name}($e as ${field.type}),';
+          return '$e: ${data.mapParameter(field, parameter: e)},';
         }
       }).join();
 
