@@ -248,21 +248,31 @@ class _$MovieDocumentReference
       "Cannot specify both genre and genreFieldValue",
     );
     final json = {
-      if (poster != _sentinel) _$MovieFieldMap['poster']!: poster as String,
+      if (poster != _sentinel)
+        _$MovieFieldMap['poster']!:
+            _$MoviePerFieldToJson.poster(poster as String),
       if (posterFieldValue != null)
         _$MovieFieldMap['poster']!: posterFieldValue,
-      if (likes != _sentinel) _$MovieFieldMap['likes']!: likes as int,
+      if (likes != _sentinel)
+        _$MovieFieldMap['likes']!: _$MoviePerFieldToJson.likes(likes as int),
       if (likesFieldValue != null) _$MovieFieldMap['likes']!: likesFieldValue,
-      if (title != _sentinel) _$MovieFieldMap['title']!: title as String,
+      if (title != _sentinel)
+        _$MovieFieldMap['title']!: _$MoviePerFieldToJson.title(title as String),
       if (titleFieldValue != null) _$MovieFieldMap['title']!: titleFieldValue,
-      if (year != _sentinel) _$MovieFieldMap['year']!: year as int,
+      if (year != _sentinel)
+        _$MovieFieldMap['year']!: _$MoviePerFieldToJson.year(year as int),
       if (yearFieldValue != null) _$MovieFieldMap['year']!: yearFieldValue,
-      if (runtime != _sentinel) _$MovieFieldMap['runtime']!: runtime as String,
+      if (runtime != _sentinel)
+        _$MovieFieldMap['runtime']!:
+            _$MoviePerFieldToJson.runtime(runtime as String),
       if (runtimeFieldValue != null)
         _$MovieFieldMap['runtime']!: runtimeFieldValue,
-      if (rated != _sentinel) _$MovieFieldMap['rated']!: rated as String,
+      if (rated != _sentinel)
+        _$MovieFieldMap['rated']!: _$MoviePerFieldToJson.rated(rated as String),
       if (ratedFieldValue != null) _$MovieFieldMap['rated']!: ratedFieldValue,
-      if (genre != _sentinel) _$MovieFieldMap['genre']!: genre as List<String>?,
+      if (genre != _sentinel)
+        _$MovieFieldMap['genre']!:
+            _$MoviePerFieldToJson.genre(genre as List<String>?),
       if (genreFieldValue != null) _$MovieFieldMap['genre']!: genreFieldValue,
     };
 
@@ -315,21 +325,31 @@ class _$MovieDocumentReference
       "Cannot specify both genre and genreFieldValue",
     );
     final json = {
-      if (poster != _sentinel) _$MovieFieldMap['poster']!: poster as String,
+      if (poster != _sentinel)
+        _$MovieFieldMap['poster']!:
+            _$MoviePerFieldToJson.poster(poster as String),
       if (posterFieldValue != null)
         _$MovieFieldMap['poster']!: posterFieldValue,
-      if (likes != _sentinel) _$MovieFieldMap['likes']!: likes as int,
+      if (likes != _sentinel)
+        _$MovieFieldMap['likes']!: _$MoviePerFieldToJson.likes(likes as int),
       if (likesFieldValue != null) _$MovieFieldMap['likes']!: likesFieldValue,
-      if (title != _sentinel) _$MovieFieldMap['title']!: title as String,
+      if (title != _sentinel)
+        _$MovieFieldMap['title']!: _$MoviePerFieldToJson.title(title as String),
       if (titleFieldValue != null) _$MovieFieldMap['title']!: titleFieldValue,
-      if (year != _sentinel) _$MovieFieldMap['year']!: year as int,
+      if (year != _sentinel)
+        _$MovieFieldMap['year']!: _$MoviePerFieldToJson.year(year as int),
       if (yearFieldValue != null) _$MovieFieldMap['year']!: yearFieldValue,
-      if (runtime != _sentinel) _$MovieFieldMap['runtime']!: runtime as String,
+      if (runtime != _sentinel)
+        _$MovieFieldMap['runtime']!:
+            _$MoviePerFieldToJson.runtime(runtime as String),
       if (runtimeFieldValue != null)
         _$MovieFieldMap['runtime']!: runtimeFieldValue,
-      if (rated != _sentinel) _$MovieFieldMap['rated']!: rated as String,
+      if (rated != _sentinel)
+        _$MovieFieldMap['rated']!: _$MoviePerFieldToJson.rated(rated as String),
       if (ratedFieldValue != null) _$MovieFieldMap['rated']!: ratedFieldValue,
-      if (genre != _sentinel) _$MovieFieldMap['genre']!: genre as List<String>?,
+      if (genre != _sentinel)
+        _$MovieFieldMap['genre']!:
+            _$MoviePerFieldToJson.genre(genre as List<String>?),
       if (genreFieldValue != null) _$MovieFieldMap['genre']!: genreFieldValue,
     };
 
@@ -797,15 +817,17 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['poster']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$MoviePerFieldToJson.poster(isEqualTo as String),
+        isNotEqualTo: _$MoviePerFieldToJson.poster(isNotEqualTo as String),
+        isLessThan: _$MoviePerFieldToJson.poster(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.poster(isLessThanOrEqualTo as String),
+        isGreaterThan: _$MoviePerFieldToJson.poster(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$MoviePerFieldToJson.poster(isGreaterThanOrEqualTo as String),
+        isNull: _$MoviePerFieldToJson.poster(isNull as String),
+        whereIn: _$MoviePerFieldToJson.poster(whereIn as String),
+        whereNotIn: _$MoviePerFieldToJson.poster(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -826,15 +848,17 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['likes']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$MoviePerFieldToJson.likes(isEqualTo as int),
+        isNotEqualTo: _$MoviePerFieldToJson.likes(isNotEqualTo as int),
+        isLessThan: _$MoviePerFieldToJson.likes(isLessThan as int),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.likes(isLessThanOrEqualTo as int),
+        isGreaterThan: _$MoviePerFieldToJson.likes(isGreaterThan as int),
+        isGreaterThanOrEqualTo:
+            _$MoviePerFieldToJson.likes(isGreaterThanOrEqualTo as int),
+        isNull: _$MoviePerFieldToJson.likes(isNull as int),
+        whereIn: _$MoviePerFieldToJson.likes(whereIn as int),
+        whereNotIn: _$MoviePerFieldToJson.likes(whereNotIn as int),
       ),
       $queryCursor: $queryCursor,
     );
@@ -855,15 +879,17 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['title']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$MoviePerFieldToJson.title(isEqualTo as String),
+        isNotEqualTo: _$MoviePerFieldToJson.title(isNotEqualTo as String),
+        isLessThan: _$MoviePerFieldToJson.title(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.title(isLessThanOrEqualTo as String),
+        isGreaterThan: _$MoviePerFieldToJson.title(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$MoviePerFieldToJson.title(isGreaterThanOrEqualTo as String),
+        isNull: _$MoviePerFieldToJson.title(isNull as String),
+        whereIn: _$MoviePerFieldToJson.title(whereIn as String),
+        whereNotIn: _$MoviePerFieldToJson.title(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -884,15 +910,17 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['year']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$MoviePerFieldToJson.year(isEqualTo as int),
+        isNotEqualTo: _$MoviePerFieldToJson.year(isNotEqualTo as int),
+        isLessThan: _$MoviePerFieldToJson.year(isLessThan as int),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.year(isLessThanOrEqualTo as int),
+        isGreaterThan: _$MoviePerFieldToJson.year(isGreaterThan as int),
+        isGreaterThanOrEqualTo:
+            _$MoviePerFieldToJson.year(isGreaterThanOrEqualTo as int),
+        isNull: _$MoviePerFieldToJson.year(isNull as int),
+        whereIn: _$MoviePerFieldToJson.year(whereIn as int),
+        whereNotIn: _$MoviePerFieldToJson.year(whereNotIn as int),
       ),
       $queryCursor: $queryCursor,
     );
@@ -913,15 +941,17 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['runtime']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$MoviePerFieldToJson.runtime(isEqualTo as String),
+        isNotEqualTo: _$MoviePerFieldToJson.runtime(isNotEqualTo as String),
+        isLessThan: _$MoviePerFieldToJson.runtime(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.runtime(isLessThanOrEqualTo as String),
+        isGreaterThan: _$MoviePerFieldToJson.runtime(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$MoviePerFieldToJson.runtime(isGreaterThanOrEqualTo as String),
+        isNull: _$MoviePerFieldToJson.runtime(isNull as String),
+        whereIn: _$MoviePerFieldToJson.runtime(whereIn as String),
+        whereNotIn: _$MoviePerFieldToJson.runtime(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -942,15 +972,17 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['rated']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$MoviePerFieldToJson.rated(isEqualTo as String),
+        isNotEqualTo: _$MoviePerFieldToJson.rated(isNotEqualTo as String),
+        isLessThan: _$MoviePerFieldToJson.rated(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.rated(isLessThanOrEqualTo as String),
+        isGreaterThan: _$MoviePerFieldToJson.rated(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$MoviePerFieldToJson.rated(isGreaterThanOrEqualTo as String),
+        isNull: _$MoviePerFieldToJson.rated(isNull as String),
+        whereIn: _$MoviePerFieldToJson.rated(whereIn as String),
+        whereNotIn: _$MoviePerFieldToJson.rated(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -971,15 +1003,21 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MovieFieldMap['genre']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        arrayContains: arrayContains,
-        arrayContainsAny: arrayContainsAny,
+        isEqualTo: _$MoviePerFieldToJson.genre(isEqualTo as List<String>?),
+        isNotEqualTo:
+            _$MoviePerFieldToJson.genre(isNotEqualTo as List<String>?),
+        isLessThan: _$MoviePerFieldToJson.genre(isLessThan as List<String>?),
+        isLessThanOrEqualTo:
+            _$MoviePerFieldToJson.genre(isLessThanOrEqualTo as List<String>?),
+        isGreaterThan:
+            _$MoviePerFieldToJson.genre(isGreaterThan as List<String>?),
+        isGreaterThanOrEqualTo: _$MoviePerFieldToJson
+            .genre(isGreaterThanOrEqualTo as List<String>?),
+        isNull: _$MoviePerFieldToJson.genre(isNull as List<String>?),
+        arrayContains:
+            _$MoviePerFieldToJson.genre(arrayContains as List<String>?),
+        arrayContainsAny:
+            _$MoviePerFieldToJson.genre(arrayContainsAny as List<String>?),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1846,11 +1884,13 @@ class _$CommentDocumentReference
     );
     final json = {
       if (authorName != _sentinel)
-        _$CommentFieldMap['authorName']!: authorName as String,
+        _$CommentFieldMap['authorName']!:
+            _$CommentPerFieldToJson.authorName(authorName as String),
       if (authorNameFieldValue != null)
         _$CommentFieldMap['authorName']!: authorNameFieldValue,
       if (message != _sentinel)
-        _$CommentFieldMap['message']!: message as String,
+        _$CommentFieldMap['message']!:
+            _$CommentPerFieldToJson.message(message as String),
       if (messageFieldValue != null)
         _$CommentFieldMap['message']!: messageFieldValue,
     };
@@ -1875,11 +1915,13 @@ class _$CommentDocumentReference
     );
     final json = {
       if (authorName != _sentinel)
-        _$CommentFieldMap['authorName']!: authorName as String,
+        _$CommentFieldMap['authorName']!:
+            _$CommentPerFieldToJson.authorName(authorName as String),
       if (authorNameFieldValue != null)
         _$CommentFieldMap['authorName']!: authorNameFieldValue,
       if (message != _sentinel)
-        _$CommentFieldMap['message']!: message as String,
+        _$CommentFieldMap['message']!:
+            _$CommentPerFieldToJson.message(message as String),
       if (messageFieldValue != null)
         _$CommentFieldMap['message']!: messageFieldValue,
     };
@@ -2234,15 +2276,19 @@ class _$CommentQuery extends QueryReference<Comment, CommentQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$CommentFieldMap['authorName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$CommentPerFieldToJson.authorName(isEqualTo as String),
+        isNotEqualTo:
+            _$CommentPerFieldToJson.authorName(isNotEqualTo as String),
+        isLessThan: _$CommentPerFieldToJson.authorName(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$CommentPerFieldToJson.authorName(isLessThanOrEqualTo as String),
+        isGreaterThan:
+            _$CommentPerFieldToJson.authorName(isGreaterThan as String),
+        isGreaterThanOrEqualTo: _$CommentPerFieldToJson
+            .authorName(isGreaterThanOrEqualTo as String),
+        isNull: _$CommentPerFieldToJson.authorName(isNull as String),
+        whereIn: _$CommentPerFieldToJson.authorName(whereIn as String),
+        whereNotIn: _$CommentPerFieldToJson.authorName(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2263,15 +2309,17 @@ class _$CommentQuery extends QueryReference<Comment, CommentQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$CommentFieldMap['message']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$CommentPerFieldToJson.message(isEqualTo as String),
+        isNotEqualTo: _$CommentPerFieldToJson.message(isNotEqualTo as String),
+        isLessThan: _$CommentPerFieldToJson.message(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$CommentPerFieldToJson.message(isLessThanOrEqualTo as String),
+        isGreaterThan: _$CommentPerFieldToJson.message(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$CommentPerFieldToJson.message(isGreaterThanOrEqualTo as String),
+        isNull: _$CommentPerFieldToJson.message(isNull as String),
+        whereIn: _$CommentPerFieldToJson.message(whereIn as String),
+        whereNotIn: _$CommentPerFieldToJson.message(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2623,6 +2671,26 @@ const _$MovieFieldMap = <String, String>{
   'genre': 'genre',
 };
 
+// ignore: unused_element
+abstract class _$MoviePerFieldToJson {
+  // ignore: unused_element
+  static Object? id(String instance) => instance;
+  // ignore: unused_element
+  static Object? poster(String instance) => instance;
+  // ignore: unused_element
+  static Object? likes(int instance) => instance;
+  // ignore: unused_element
+  static Object? title(String instance) => instance;
+  // ignore: unused_element
+  static Object? year(int instance) => instance;
+  // ignore: unused_element
+  static Object? runtime(String instance) => instance;
+  // ignore: unused_element
+  static Object? rated(String instance) => instance;
+  // ignore: unused_element
+  static Object? genre(List<String>? instance) => instance;
+}
+
 Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
       'id': instance.id,
       'poster': instance.poster,
@@ -2643,6 +2711,14 @@ const _$CommentFieldMap = <String, String>{
   'authorName': 'authorName',
   'message': 'message',
 };
+
+// ignore: unused_element
+abstract class _$CommentPerFieldToJson {
+  // ignore: unused_element
+  static Object? authorName(String instance) => instance;
+  // ignore: unused_element
+  static Object? message(String instance) => instance;
+}
 
 Map<String, dynamic> _$CommentToJson(Comment instance) => <String, dynamic>{
       'authorName': instance.authorName,

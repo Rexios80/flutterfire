@@ -180,7 +180,8 @@ class _$ManualJsonDocumentReference
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel) 'value': value as String,
+      if (value != _sentinel)
+        'value': _$ManualJsonPerFieldToJson.value(value as String),
       if (valueFieldValue != null) 'value': valueFieldValue,
     };
 
@@ -197,7 +198,8 @@ class _$ManualJsonDocumentReference
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel) 'value': value as String,
+      if (value != _sentinel)
+        'value': _$ManualJsonPerFieldToJson.value(value as String),
       if (valueFieldValue != null) 'value': valueFieldValue,
     };
 
@@ -533,15 +535,18 @@ class _$ManualJsonQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         'value',
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$ManualJsonPerFieldToJson.value(isEqualTo as String),
+        isNotEqualTo: _$ManualJsonPerFieldToJson.value(isNotEqualTo as String),
+        isLessThan: _$ManualJsonPerFieldToJson.value(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$ManualJsonPerFieldToJson.value(isLessThanOrEqualTo as String),
+        isGreaterThan:
+            _$ManualJsonPerFieldToJson.value(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$ManualJsonPerFieldToJson.value(isGreaterThanOrEqualTo as String),
+        isNull: _$ManualJsonPerFieldToJson.value(isNull as String),
+        whereIn: _$ManualJsonPerFieldToJson.value(whereIn as String),
+        whereNotIn: _$ManualJsonPerFieldToJson.value(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -962,11 +967,13 @@ class _$AdvancedJsonDocumentReference extends FirestoreDocumentReference<
     );
     final json = {
       if (firstName != _sentinel)
-        _$AdvancedJsonFieldMap['firstName']!: firstName as String?,
+        _$AdvancedJsonFieldMap['firstName']!:
+            _$AdvancedJsonPerFieldToJson.firstName(firstName as String?),
       if (firstNameFieldValue != null)
         _$AdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$AdvancedJsonFieldMap['lastName']!: lastName as String?,
+        _$AdvancedJsonFieldMap['lastName']!:
+            _$AdvancedJsonPerFieldToJson.lastName(lastName as String?),
       if (lastNameFieldValue != null)
         _$AdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -991,11 +998,13 @@ class _$AdvancedJsonDocumentReference extends FirestoreDocumentReference<
     );
     final json = {
       if (firstName != _sentinel)
-        _$AdvancedJsonFieldMap['firstName']!: firstName as String?,
+        _$AdvancedJsonFieldMap['firstName']!:
+            _$AdvancedJsonPerFieldToJson.firstName(firstName as String?),
       if (firstNameFieldValue != null)
         _$AdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$AdvancedJsonFieldMap['lastName']!: lastName as String?,
+        _$AdvancedJsonFieldMap['lastName']!:
+            _$AdvancedJsonPerFieldToJson.lastName(lastName as String?),
       if (lastNameFieldValue != null)
         _$AdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -1355,15 +1364,21 @@ class _$AdvancedJsonQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$AdvancedJsonFieldMap['firstName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$AdvancedJsonPerFieldToJson.firstName(isEqualTo as String?),
+        isNotEqualTo:
+            _$AdvancedJsonPerFieldToJson.firstName(isNotEqualTo as String?),
+        isLessThan:
+            _$AdvancedJsonPerFieldToJson.firstName(isLessThan as String?),
+        isLessThanOrEqualTo: _$AdvancedJsonPerFieldToJson
+            .firstName(isLessThanOrEqualTo as String?),
+        isGreaterThan:
+            _$AdvancedJsonPerFieldToJson.firstName(isGreaterThan as String?),
+        isGreaterThanOrEqualTo: _$AdvancedJsonPerFieldToJson
+            .firstName(isGreaterThanOrEqualTo as String?),
+        isNull: _$AdvancedJsonPerFieldToJson.firstName(isNull as String?),
+        whereIn: _$AdvancedJsonPerFieldToJson.firstName(whereIn as String?),
+        whereNotIn:
+            _$AdvancedJsonPerFieldToJson.firstName(whereNotIn as String?),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1384,15 +1399,21 @@ class _$AdvancedJsonQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$AdvancedJsonFieldMap['lastName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$AdvancedJsonPerFieldToJson.lastName(isEqualTo as String?),
+        isNotEqualTo:
+            _$AdvancedJsonPerFieldToJson.lastName(isNotEqualTo as String?),
+        isLessThan:
+            _$AdvancedJsonPerFieldToJson.lastName(isLessThan as String?),
+        isLessThanOrEqualTo: _$AdvancedJsonPerFieldToJson
+            .lastName(isLessThanOrEqualTo as String?),
+        isGreaterThan:
+            _$AdvancedJsonPerFieldToJson.lastName(isGreaterThan as String?),
+        isGreaterThanOrEqualTo: _$AdvancedJsonPerFieldToJson
+            .lastName(isGreaterThanOrEqualTo as String?),
+        isNull: _$AdvancedJsonPerFieldToJson.lastName(isNull as String?),
+        whereIn: _$AdvancedJsonPerFieldToJson.lastName(whereIn as String?),
+        whereNotIn:
+            _$AdvancedJsonPerFieldToJson.lastName(whereNotIn as String?),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1899,11 +1920,14 @@ class _$_PrivateAdvancedJsonDocumentReference
     );
     final json = {
       if (firstName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['firstName']!: firstName as String?,
+        _$PrivateAdvancedJsonFieldMap['firstName']!:
+            _$_PrivateAdvancedJsonPerFieldToJson
+                .firstName(firstName as String?),
       if (firstNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['lastName']!: lastName as String?,
+        _$PrivateAdvancedJsonFieldMap['lastName']!:
+            _$_PrivateAdvancedJsonPerFieldToJson.lastName(lastName as String?),
       if (lastNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -1928,11 +1952,14 @@ class _$_PrivateAdvancedJsonDocumentReference
     );
     final json = {
       if (firstName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['firstName']!: firstName as String?,
+        _$PrivateAdvancedJsonFieldMap['firstName']!:
+            _$_PrivateAdvancedJsonPerFieldToJson
+                .firstName(firstName as String?),
       if (firstNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['lastName']!: lastName as String?,
+        _$PrivateAdvancedJsonFieldMap['lastName']!:
+            _$_PrivateAdvancedJsonPerFieldToJson.lastName(lastName as String?),
       if (lastNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -2294,15 +2321,24 @@ class _$_PrivateAdvancedJsonQuery extends QueryReference<_PrivateAdvancedJson,
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$PrivateAdvancedJsonFieldMap['firstName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(isEqualTo as String?),
+        isNotEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(isNotEqualTo as String?),
+        isLessThan: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(isLessThan as String?),
+        isLessThanOrEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(isLessThanOrEqualTo as String?),
+        isGreaterThan: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(isGreaterThan as String?),
+        isGreaterThanOrEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(isGreaterThanOrEqualTo as String?),
+        isNull:
+            _$_PrivateAdvancedJsonPerFieldToJson.firstName(isNull as String?),
+        whereIn:
+            _$_PrivateAdvancedJsonPerFieldToJson.firstName(whereIn as String?),
+        whereNotIn: _$_PrivateAdvancedJsonPerFieldToJson
+            .firstName(whereNotIn as String?),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2323,15 +2359,24 @@ class _$_PrivateAdvancedJsonQuery extends QueryReference<_PrivateAdvancedJson,
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$PrivateAdvancedJsonFieldMap['lastName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo:
+            _$_PrivateAdvancedJsonPerFieldToJson.lastName(isEqualTo as String?),
+        isNotEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .lastName(isNotEqualTo as String?),
+        isLessThan: _$_PrivateAdvancedJsonPerFieldToJson
+            .lastName(isLessThan as String?),
+        isLessThanOrEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .lastName(isLessThanOrEqualTo as String?),
+        isGreaterThan: _$_PrivateAdvancedJsonPerFieldToJson
+            .lastName(isGreaterThan as String?),
+        isGreaterThanOrEqualTo: _$_PrivateAdvancedJsonPerFieldToJson
+            .lastName(isGreaterThanOrEqualTo as String?),
+        isNull:
+            _$_PrivateAdvancedJsonPerFieldToJson.lastName(isNull as String?),
+        whereIn:
+            _$_PrivateAdvancedJsonPerFieldToJson.lastName(whereIn as String?),
+        whereNotIn: _$_PrivateAdvancedJsonPerFieldToJson
+            .lastName(whereNotIn as String?),
       ),
       $queryCursor: $queryCursor,
     );
@@ -3269,6 +3314,14 @@ const _$AdvancedJsonFieldMap = <String, String>{
   'lastName': 'LAST_NAME',
 };
 
+// ignore: unused_element
+abstract class _$AdvancedJsonPerFieldToJson {
+  // ignore: unused_element
+  static Object? firstName(String? instance) => instance;
+  // ignore: unused_element
+  static Object? lastName(String? instance) => instance;
+}
+
 Map<String, dynamic> _$AdvancedJsonToJson(AdvancedJson instance) =>
     <String, dynamic>{
       'first_name': instance.firstName,
@@ -3285,6 +3338,14 @@ const _$PrivateAdvancedJsonFieldMap = <String, String>{
   'firstName': 'first_name',
   'lastName': 'LAST_NAME',
 };
+
+// ignore: unused_element
+abstract class _$PrivateAdvancedJsonPerFieldToJson {
+  // ignore: unused_element
+  static Object? firstName(String? instance) => instance;
+  // ignore: unused_element
+  static Object? lastName(String? instance) => instance;
+}
 
 Map<String, dynamic> _$PrivateAdvancedJsonToJson(
         _PrivateAdvancedJson instance) =>

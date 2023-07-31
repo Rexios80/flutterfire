@@ -8,7 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'movie.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(createPerFieldToJson: true)
 class Movie {
   Movie({
     this.genre,
@@ -40,7 +40,7 @@ class Movie {
 @Collection<Comment>('firestore-example-app/*/comments', name: 'comments')
 final moviesRef = MovieCollectionReference();
 
-@JsonSerializable()
+@JsonSerializable(createPerFieldToJson: true)
 class Comment {
   Comment({
     required this.authorName,

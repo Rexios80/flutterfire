@@ -14,7 +14,7 @@ part 'freezed.g.dart';
 @Collection<Person>('freezed-test')
 @freezed
 class Person with _$Person {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @JsonSerializable(fieldRename: FieldRename.snake, createPerFieldToJson: true)
   factory Person({
     required String firstName,
     @JsonKey(name: 'LAST_NAME') required String lastName,

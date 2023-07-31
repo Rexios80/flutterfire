@@ -191,11 +191,13 @@ class _$PersonDocumentReference
     );
     final json = {
       if (firstName != _sentinel)
-        _$$_PersonFieldMap['firstName']!: firstName as String,
+        _$$_PersonFieldMap['firstName']!:
+            _$PersonPerFieldToJson.firstName(firstName as String),
       if (firstNameFieldValue != null)
         _$$_PersonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$$_PersonFieldMap['lastName']!: lastName as String,
+        _$$_PersonFieldMap['lastName']!:
+            _$PersonPerFieldToJson.lastName(lastName as String),
       if (lastNameFieldValue != null)
         _$$_PersonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -220,11 +222,13 @@ class _$PersonDocumentReference
     );
     final json = {
       if (firstName != _sentinel)
-        _$$_PersonFieldMap['firstName']!: firstName as String,
+        _$$_PersonFieldMap['firstName']!:
+            _$PersonPerFieldToJson.firstName(firstName as String),
       if (firstNameFieldValue != null)
         _$$_PersonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$$_PersonFieldMap['lastName']!: lastName as String,
+        _$$_PersonFieldMap['lastName']!:
+            _$PersonPerFieldToJson.lastName(lastName as String),
       if (lastNameFieldValue != null)
         _$$_PersonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -579,15 +583,18 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$_PersonFieldMap['firstName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$PersonPerFieldToJson.firstName(isEqualTo as String),
+        isNotEqualTo: _$PersonPerFieldToJson.firstName(isNotEqualTo as String),
+        isLessThan: _$PersonPerFieldToJson.firstName(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$PersonPerFieldToJson.firstName(isLessThanOrEqualTo as String),
+        isGreaterThan:
+            _$PersonPerFieldToJson.firstName(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$PersonPerFieldToJson.firstName(isGreaterThanOrEqualTo as String),
+        isNull: _$PersonPerFieldToJson.firstName(isNull as String),
+        whereIn: _$PersonPerFieldToJson.firstName(whereIn as String),
+        whereNotIn: _$PersonPerFieldToJson.firstName(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -608,15 +615,17 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$_PersonFieldMap['lastName']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$PersonPerFieldToJson.lastName(isEqualTo as String),
+        isNotEqualTo: _$PersonPerFieldToJson.lastName(isNotEqualTo as String),
+        isLessThan: _$PersonPerFieldToJson.lastName(isLessThan as String),
+        isLessThanOrEqualTo:
+            _$PersonPerFieldToJson.lastName(isLessThanOrEqualTo as String),
+        isGreaterThan: _$PersonPerFieldToJson.lastName(isGreaterThan as String),
+        isGreaterThanOrEqualTo:
+            _$PersonPerFieldToJson.lastName(isGreaterThanOrEqualTo as String),
+        isNull: _$PersonPerFieldToJson.lastName(isNull as String),
+        whereIn: _$PersonPerFieldToJson.lastName(whereIn as String),
+        whereNotIn: _$PersonPerFieldToJson.lastName(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1102,7 +1111,8 @@ class _$PublicRedirectedDocumentReference extends FirestoreDocumentReference<
     );
     final json = {
       if (value != _sentinel)
-        _$$PublicRedirected2FieldMap['value']!: value as String,
+        _$$PublicRedirected2FieldMap['value']!:
+            _$PublicRedirectedPerFieldToJson.value(value as String),
       if (valueFieldValue != null)
         _$$PublicRedirected2FieldMap['value']!: valueFieldValue,
     };
@@ -1121,7 +1131,8 @@ class _$PublicRedirectedDocumentReference extends FirestoreDocumentReference<
     );
     final json = {
       if (value != _sentinel)
-        _$$PublicRedirected2FieldMap['value']!: value as String,
+        _$$PublicRedirected2FieldMap['value']!:
+            _$PublicRedirectedPerFieldToJson.value(value as String),
       if (valueFieldValue != null)
         _$$PublicRedirected2FieldMap['value']!: valueFieldValue,
     };
@@ -1458,15 +1469,21 @@ class _$PublicRedirectedQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$PublicRedirected2FieldMap['value']!,
-        isEqualTo: isEqualTo,
-        isNotEqualTo: isNotEqualTo,
-        isLessThan: isLessThan,
-        isLessThanOrEqualTo: isLessThanOrEqualTo,
-        isGreaterThan: isGreaterThan,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
-        isNull: isNull,
-        whereIn: whereIn,
-        whereNotIn: whereNotIn,
+        isEqualTo: _$PublicRedirectedPerFieldToJson.value(isEqualTo as String),
+        isNotEqualTo:
+            _$PublicRedirectedPerFieldToJson.value(isNotEqualTo as String),
+        isLessThan:
+            _$PublicRedirectedPerFieldToJson.value(isLessThan as String),
+        isLessThanOrEqualTo: _$PublicRedirectedPerFieldToJson
+            .value(isLessThanOrEqualTo as String),
+        isGreaterThan:
+            _$PublicRedirectedPerFieldToJson.value(isGreaterThan as String),
+        isGreaterThanOrEqualTo: _$PublicRedirectedPerFieldToJson
+            .value(isGreaterThanOrEqualTo as String),
+        isNull: _$PublicRedirectedPerFieldToJson.value(isNull as String),
+        whereIn: _$PublicRedirectedPerFieldToJson.value(whereIn as String),
+        whereNotIn:
+            _$PublicRedirectedPerFieldToJson.value(whereNotIn as String),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1729,6 +1746,14 @@ const _$$_PersonFieldMap = <String, String>{
   'firstName': 'first_name',
   'lastName': 'LAST_NAME',
 };
+
+// ignore: unused_element
+abstract class _$$_PersonPerFieldToJson {
+  // ignore: unused_element
+  static Object? firstName(String instance) => instance;
+  // ignore: unused_element
+  static Object? lastName(String instance) => instance;
+}
 
 Map<String, dynamic> _$$_PersonToJson(_$_Person instance) => <String, dynamic>{
       'first_name': instance.firstName,

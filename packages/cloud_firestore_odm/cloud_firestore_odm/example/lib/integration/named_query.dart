@@ -10,7 +10,7 @@ part 'named_query.g.dart';
 
 @NamedQuery<Conflict>('named-bundle-test-4')
 @Collection<Conflict>('firestore-example-app/42/named-query-conflict')
-@JsonSerializable()
+@JsonSerializable(createPerFieldToJson: true)
 class Conflict {
   Conflict(this.number);
 
