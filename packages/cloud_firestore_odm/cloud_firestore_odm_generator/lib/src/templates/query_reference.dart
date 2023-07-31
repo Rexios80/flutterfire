@@ -400,6 +400,7 @@ class ${data.queryReferenceImplName}
 
       final rawParameters = {'isNull'};
       final listParameters = {'arrayContainsAny', 'whereIn', 'whereNotIn'};
+      final listedParameters = {'arrayContains'};
 
       final prototype =
           operators.entries.map((e) => '${e.value} ${e.key},').join();
@@ -409,6 +410,8 @@ class ${data.queryReferenceImplName}
           return '$e: $e,';
         } else if (listParameters.contains(e)) {
           return '$e: $e?.map((e) => ${data.mapParameter(field, parameter: 'e', tearoff: true)}).toList(),';
+        } else if (listedParameters.contains(e)) {
+          return '$e: $e != null ? ${data.mapParameter(field, parameter: e, list: true)} : null,';
         } else {
           return '$e: $e != null ? ${data.mapParameter(field, parameter: e)} : null,';
         }

@@ -358,7 +358,13 @@ represents the content of the collection must be in the same file.
     String? parameter,
     bool tearoff = false,
     bool cast = false,
+    bool list = false,
   }) {
+    assert(
+      [tearoff, cast, list].where((e) => e).length <= 1,
+      'Only one of tearoff, cast, list can be true',
+    );
+
     parameter ??= field.name;
     final type = this.type.getDisplayString(withNullability: false);
     final perFieldToJson =
@@ -368,6 +374,8 @@ represents the content of the collection must be in the same file.
       return mapping;
     } else if (cast) {
       return '$mapping($parameter as ${field.type})';
+    } else if (list) {
+      return '($mapping([$parameter]) as List?)!.first';
     } else {
       return '$mapping($parameter)';
     }

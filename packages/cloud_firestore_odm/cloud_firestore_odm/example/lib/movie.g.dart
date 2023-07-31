@@ -1076,7 +1076,7 @@ class _$MovieQuery extends QueryReference<Movie, MovieQuerySnapshot>
             : null,
         isNull: isNull,
         arrayContains: arrayContains != null
-            ? _$MoviePerFieldToJson.genre(arrayContains)
+            ? (_$MoviePerFieldToJson.genre([arrayContains]) as List?)!.first
             : null,
         arrayContainsAny:
             arrayContainsAny?.map((e) => _$MoviePerFieldToJson.genre).toList(),
