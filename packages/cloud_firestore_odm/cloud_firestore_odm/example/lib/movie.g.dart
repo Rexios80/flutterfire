@@ -250,29 +250,31 @@ class _$MovieDocumentReference
     final json = {
       if (poster != _sentinel)
         _$MovieFieldMap['poster']!:
-            _$MoviePerFieldToJson.poster(poster as String),
+            _$MoviePerFieldToJson.poster(poster! as String),
       if (posterFieldValue != null)
         _$MovieFieldMap['poster']!: posterFieldValue,
       if (likes != _sentinel)
-        _$MovieFieldMap['likes']!: _$MoviePerFieldToJson.likes(likes as int),
+        _$MovieFieldMap['likes']!: _$MoviePerFieldToJson.likes(likes! as int),
       if (likesFieldValue != null) _$MovieFieldMap['likes']!: likesFieldValue,
       if (title != _sentinel)
-        _$MovieFieldMap['title']!: _$MoviePerFieldToJson.title(title as String),
+        _$MovieFieldMap['title']!:
+            _$MoviePerFieldToJson.title(title! as String),
       if (titleFieldValue != null) _$MovieFieldMap['title']!: titleFieldValue,
       if (year != _sentinel)
-        _$MovieFieldMap['year']!: _$MoviePerFieldToJson.year(year as int),
+        _$MovieFieldMap['year']!: _$MoviePerFieldToJson.year(year! as int),
       if (yearFieldValue != null) _$MovieFieldMap['year']!: yearFieldValue,
       if (runtime != _sentinel)
         _$MovieFieldMap['runtime']!:
-            _$MoviePerFieldToJson.runtime(runtime as String),
+            _$MoviePerFieldToJson.runtime(runtime! as String),
       if (runtimeFieldValue != null)
         _$MovieFieldMap['runtime']!: runtimeFieldValue,
       if (rated != _sentinel)
-        _$MovieFieldMap['rated']!: _$MoviePerFieldToJson.rated(rated as String),
+        _$MovieFieldMap['rated']!:
+            _$MoviePerFieldToJson.rated(rated! as String),
       if (ratedFieldValue != null) _$MovieFieldMap['rated']!: ratedFieldValue,
       if (genre != _sentinel)
         _$MovieFieldMap['genre']!:
-            _$MoviePerFieldToJson.genre(genre as List<String>?),
+            _$MoviePerFieldToJson.genre(genre! as List<String>?),
       if (genreFieldValue != null) _$MovieFieldMap['genre']!: genreFieldValue,
     };
 
@@ -327,29 +329,31 @@ class _$MovieDocumentReference
     final json = {
       if (poster != _sentinel)
         _$MovieFieldMap['poster']!:
-            _$MoviePerFieldToJson.poster(poster as String),
+            _$MoviePerFieldToJson.poster(poster! as String),
       if (posterFieldValue != null)
         _$MovieFieldMap['poster']!: posterFieldValue,
       if (likes != _sentinel)
-        _$MovieFieldMap['likes']!: _$MoviePerFieldToJson.likes(likes as int),
+        _$MovieFieldMap['likes']!: _$MoviePerFieldToJson.likes(likes! as int),
       if (likesFieldValue != null) _$MovieFieldMap['likes']!: likesFieldValue,
       if (title != _sentinel)
-        _$MovieFieldMap['title']!: _$MoviePerFieldToJson.title(title as String),
+        _$MovieFieldMap['title']!:
+            _$MoviePerFieldToJson.title(title! as String),
       if (titleFieldValue != null) _$MovieFieldMap['title']!: titleFieldValue,
       if (year != _sentinel)
-        _$MovieFieldMap['year']!: _$MoviePerFieldToJson.year(year as int),
+        _$MovieFieldMap['year']!: _$MoviePerFieldToJson.year(year! as int),
       if (yearFieldValue != null) _$MovieFieldMap['year']!: yearFieldValue,
       if (runtime != _sentinel)
         _$MovieFieldMap['runtime']!:
-            _$MoviePerFieldToJson.runtime(runtime as String),
+            _$MoviePerFieldToJson.runtime(runtime! as String),
       if (runtimeFieldValue != null)
         _$MovieFieldMap['runtime']!: runtimeFieldValue,
       if (rated != _sentinel)
-        _$MovieFieldMap['rated']!: _$MoviePerFieldToJson.rated(rated as String),
+        _$MovieFieldMap['rated']!:
+            _$MoviePerFieldToJson.rated(rated! as String),
       if (ratedFieldValue != null) _$MovieFieldMap['rated']!: ratedFieldValue,
       if (genre != _sentinel)
         _$MovieFieldMap['genre']!:
-            _$MoviePerFieldToJson.genre(genre as List<String>?),
+            _$MoviePerFieldToJson.genre(genre! as List<String>?),
       if (genreFieldValue != null) _$MovieFieldMap['genre']!: genreFieldValue,
     };
 
@@ -1947,12 +1951,12 @@ class _$CommentDocumentReference
     final json = {
       if (authorName != _sentinel)
         _$CommentFieldMap['authorName']!:
-            _$CommentPerFieldToJson.authorName(authorName as String),
+            _$CommentPerFieldToJson.authorName(authorName! as String),
       if (authorNameFieldValue != null)
         _$CommentFieldMap['authorName']!: authorNameFieldValue,
       if (message != _sentinel)
         _$CommentFieldMap['message']!:
-            _$CommentPerFieldToJson.message(message as String),
+            _$CommentPerFieldToJson.message(message! as String),
       if (messageFieldValue != null)
         _$CommentFieldMap['message']!: messageFieldValue,
     };
@@ -1978,12 +1982,12 @@ class _$CommentDocumentReference
     final json = {
       if (authorName != _sentinel)
         _$CommentFieldMap['authorName']!:
-            _$CommentPerFieldToJson.authorName(authorName as String),
+            _$CommentPerFieldToJson.authorName(authorName! as String),
       if (authorNameFieldValue != null)
         _$CommentFieldMap['authorName']!: authorNameFieldValue,
       if (message != _sentinel)
         _$CommentFieldMap['message']!:
-            _$CommentPerFieldToJson.message(message as String),
+            _$CommentPerFieldToJson.message(message! as String),
       if (messageFieldValue != null)
         _$CommentFieldMap['message']!: messageFieldValue,
     };

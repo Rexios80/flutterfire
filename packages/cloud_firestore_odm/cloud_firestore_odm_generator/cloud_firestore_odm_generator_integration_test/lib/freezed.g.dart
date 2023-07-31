@@ -188,14 +188,10 @@ class _$PersonDocumentReference
       "Cannot specify both lastName and lastNameFieldValue",
     );
     final json = {
-      if (firstName != _sentinel)
-        _$$_PersonFieldMap['firstName']!:
-            _$$_PersonPerFieldToJson.firstName(firstName as String),
+      if (firstName != _sentinel) _$$_PersonFieldMap['firstName']!: firstName,
       if (firstNameFieldValue != null)
         _$$_PersonFieldMap['firstName']!: firstNameFieldValue,
-      if (lastName != _sentinel)
-        _$$_PersonFieldMap['lastName']!:
-            _$$_PersonPerFieldToJson.lastName(lastName as String),
+      if (lastName != _sentinel) _$$_PersonFieldMap['lastName']!: lastName,
       if (lastNameFieldValue != null)
         _$$_PersonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -219,14 +215,10 @@ class _$PersonDocumentReference
       "Cannot specify both lastName and lastNameFieldValue",
     );
     final json = {
-      if (firstName != _sentinel)
-        _$$_PersonFieldMap['firstName']!:
-            _$$_PersonPerFieldToJson.firstName(firstName as String),
+      if (firstName != _sentinel) _$$_PersonFieldMap['firstName']!: firstName,
       if (firstNameFieldValue != null)
         _$$_PersonFieldMap['firstName']!: firstNameFieldValue,
-      if (lastName != _sentinel)
-        _$$_PersonFieldMap['lastName']!:
-            _$$_PersonPerFieldToJson.lastName(lastName as String),
+      if (lastName != _sentinel) _$$_PersonFieldMap['lastName']!: lastName,
       if (lastNameFieldValue != null)
         _$$_PersonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -581,29 +573,17 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$_PersonFieldMap['firstName']!,
-        isEqualTo: isEqualTo != null
-            ? _$$_PersonPerFieldToJson.firstName(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$$_PersonPerFieldToJson.firstName(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$$_PersonPerFieldToJson.firstName(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$$_PersonPerFieldToJson.firstName(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$$_PersonPerFieldToJson.firstName(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$$_PersonPerFieldToJson.firstName(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn:
-            whereIn?.map((e) => _$$_PersonPerFieldToJson.firstName).toList(),
-        whereNotIn:
-            whereNotIn?.map((e) => _$$_PersonPerFieldToJson.firstName).toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -624,29 +604,17 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$_PersonFieldMap['lastName']!,
-        isEqualTo: isEqualTo != null
-            ? _$$_PersonPerFieldToJson.lastName(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$$_PersonPerFieldToJson.lastName(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$$_PersonPerFieldToJson.lastName(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$$_PersonPerFieldToJson.lastName(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$$_PersonPerFieldToJson.lastName(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$$_PersonPerFieldToJson.lastName(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn:
-            whereIn?.map((e) => _$$_PersonPerFieldToJson.lastName).toList(),
-        whereNotIn:
-            whereNotIn?.map((e) => _$$_PersonPerFieldToJson.lastName).toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1131,9 +1099,7 @@ class _$PublicRedirectedDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel)
-        _$$PublicRedirected2FieldMap['value']!:
-            _$$_PublicRedirectedPerFieldToJson.value(value as String),
+      if (value != _sentinel) _$$PublicRedirected2FieldMap['value']!: value,
       if (valueFieldValue != null)
         _$$PublicRedirected2FieldMap['value']!: valueFieldValue,
     };
@@ -1151,9 +1117,7 @@ class _$PublicRedirectedDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel)
-        _$$PublicRedirected2FieldMap['value']!:
-            _$$_PublicRedirectedPerFieldToJson.value(value as String),
+      if (value != _sentinel) _$$PublicRedirected2FieldMap['value']!: value,
       if (valueFieldValue != null)
         _$$PublicRedirected2FieldMap['value']!: valueFieldValue,
     };
@@ -1490,31 +1454,17 @@ class _$PublicRedirectedQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$$PublicRedirected2FieldMap['value']!,
-        isEqualTo: isEqualTo != null
-            ? _$$_PublicRedirectedPerFieldToJson.value(isEqualTo)
-            : null,
-        isNotEqualTo: isNotEqualTo != null
-            ? _$$_PublicRedirectedPerFieldToJson.value(isNotEqualTo)
-            : null,
-        isLessThan: isLessThan != null
-            ? _$$_PublicRedirectedPerFieldToJson.value(isLessThan)
-            : null,
-        isLessThanOrEqualTo: isLessThanOrEqualTo != null
-            ? _$$_PublicRedirectedPerFieldToJson.value(isLessThanOrEqualTo)
-            : null,
-        isGreaterThan: isGreaterThan != null
-            ? _$$_PublicRedirectedPerFieldToJson.value(isGreaterThan)
-            : null,
-        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
-            ? _$$_PublicRedirectedPerFieldToJson.value(isGreaterThanOrEqualTo)
-            : null,
+        isEqualTo: isEqualTo != null ? isEqualTo : null,
+        isNotEqualTo: isNotEqualTo != null ? isNotEqualTo : null,
+        isLessThan: isLessThan != null ? isLessThan : null,
+        isLessThanOrEqualTo:
+            isLessThanOrEqualTo != null ? isLessThanOrEqualTo : null,
+        isGreaterThan: isGreaterThan != null ? isGreaterThan : null,
+        isGreaterThanOrEqualTo:
+            isGreaterThanOrEqualTo != null ? isGreaterThanOrEqualTo : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$$_PublicRedirectedPerFieldToJson.value)
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$$_PublicRedirectedPerFieldToJson.value)
-            .toList(),
+        whereIn: whereIn?.map((e) => e).toList(),
+        whereNotIn: whereNotIn?.map((e) => e).toList(),
       ),
       $queryCursor: $queryCursor,
     );

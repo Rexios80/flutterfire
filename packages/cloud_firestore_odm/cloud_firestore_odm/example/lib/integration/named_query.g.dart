@@ -201,7 +201,7 @@ class _$ConflictDocumentReference
     final json = {
       if (number != _sentinel)
         _$ConflictFieldMap['number']!:
-            _$ConflictPerFieldToJson.number(number as num),
+            _$ConflictPerFieldToJson.number(number! as num),
       if (numberFieldValue != null)
         _$ConflictFieldMap['number']!: numberFieldValue,
     };
@@ -221,7 +221,7 @@ class _$ConflictDocumentReference
     final json = {
       if (number != _sentinel)
         _$ConflictFieldMap['number']!:
-            _$ConflictPerFieldToJson.number(number as num),
+            _$ConflictPerFieldToJson.number(number! as num),
       if (numberFieldValue != null)
         _$ConflictFieldMap['number']!: numberFieldValue,
     };

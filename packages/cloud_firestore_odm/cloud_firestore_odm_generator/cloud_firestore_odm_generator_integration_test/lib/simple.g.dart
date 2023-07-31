@@ -186,7 +186,7 @@ class _$IgnoredGetterDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$IgnoredGetterFieldMap['value']!:
-            _$IgnoredGetterPerFieldToJson.value(value as int),
+            _$IgnoredGetterPerFieldToJson.value(value! as int),
       if (valueFieldValue != null)
         _$IgnoredGetterFieldMap['value']!: valueFieldValue,
     };
@@ -206,7 +206,7 @@ class _$IgnoredGetterDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$IgnoredGetterFieldMap['value']!:
-            _$IgnoredGetterPerFieldToJson.value(value as int),
+            _$IgnoredGetterPerFieldToJson.value(value! as int),
       if (valueFieldValue != null)
         _$IgnoredGetterFieldMap['value']!: valueFieldValue,
     };
@@ -976,7 +976,8 @@ class _$ModelDocumentReference
     );
     final json = {
       if (value != _sentinel)
-        _$ModelFieldMap['value']!: _$ModelPerFieldToJson.value(value as String),
+        _$ModelFieldMap['value']!:
+            _$ModelPerFieldToJson.value(value! as String),
       if (valueFieldValue != null) _$ModelFieldMap['value']!: valueFieldValue,
     };
 
@@ -994,7 +995,8 @@ class _$ModelDocumentReference
     );
     final json = {
       if (value != _sentinel)
-        _$ModelFieldMap['value']!: _$ModelPerFieldToJson.value(value as String),
+        _$ModelFieldMap['value']!:
+            _$ModelPerFieldToJson.value(value! as String),
       if (valueFieldValue != null) _$ModelFieldMap['value']!: valueFieldValue,
     };
 
@@ -1841,52 +1843,52 @@ class _$NestedDocumentReference
     final json = {
       if (simple != _sentinel)
         _$NestedFieldMap['simple']!:
-            _$NestedPerFieldToJson.simple(simple as int?),
+            _$NestedPerFieldToJson.simple(simple! as int?),
       if (simpleFieldValue != null)
         _$NestedFieldMap['simple']!: simpleFieldValue,
       if (boolList != _sentinel)
         _$NestedFieldMap['boolList']!:
-            _$NestedPerFieldToJson.boolList(boolList as List<bool>?),
+            _$NestedPerFieldToJson.boolList(boolList! as List<bool>?),
       if (boolListFieldValue != null)
         _$NestedFieldMap['boolList']!: boolListFieldValue,
       if (stringList != _sentinel)
         _$NestedFieldMap['stringList']!:
-            _$NestedPerFieldToJson.stringList(stringList as List<String>?),
+            _$NestedPerFieldToJson.stringList(stringList! as List<String>?),
       if (stringListFieldValue != null)
         _$NestedFieldMap['stringList']!: stringListFieldValue,
       if (numList != _sentinel)
         _$NestedFieldMap['numList']!:
-            _$NestedPerFieldToJson.numList(numList as List<num>?),
+            _$NestedPerFieldToJson.numList(numList! as List<num>?),
       if (numListFieldValue != null)
         _$NestedFieldMap['numList']!: numListFieldValue,
       if (objectList != _sentinel)
         _$NestedFieldMap['objectList']!:
-            _$NestedPerFieldToJson.objectList(objectList as List<Object?>?),
+            _$NestedPerFieldToJson.objectList(objectList! as List<Object?>?),
       if (objectListFieldValue != null)
         _$NestedFieldMap['objectList']!: objectListFieldValue,
       if (dynamicList != _sentinel)
         _$NestedFieldMap['dynamicList']!:
-            _$NestedPerFieldToJson.dynamicList(dynamicList as List<dynamic>?),
+            _$NestedPerFieldToJson.dynamicList(dynamicList! as List<dynamic>?),
       if (dynamicListFieldValue != null)
         _$NestedFieldMap['dynamicList']!: dynamicListFieldValue,
       if (enumValue != _sentinel)
         _$NestedFieldMap['enumValue']!:
-            _$NestedPerFieldToJson.enumValue(enumValue as TestEnum),
+            _$NestedPerFieldToJson.enumValue(enumValue! as TestEnum),
       if (enumValueFieldValue != null)
         _$NestedFieldMap['enumValue']!: enumValueFieldValue,
       if (nullableEnumValue != _sentinel)
         _$NestedFieldMap['nullableEnumValue']!: _$NestedPerFieldToJson
-            .nullableEnumValue(nullableEnumValue as TestEnum?),
+            .nullableEnumValue(nullableEnumValue! as TestEnum?),
       if (nullableEnumValueFieldValue != null)
         _$NestedFieldMap['nullableEnumValue']!: nullableEnumValueFieldValue,
       if (enumList != _sentinel)
         _$NestedFieldMap['enumList']!:
-            _$NestedPerFieldToJson.enumList(enumList as List<TestEnum>),
+            _$NestedPerFieldToJson.enumList(enumList! as List<TestEnum>),
       if (enumListFieldValue != null)
         _$NestedFieldMap['enumList']!: enumListFieldValue,
       if (nullableEnumList != _sentinel)
         _$NestedFieldMap['nullableEnumList']!: _$NestedPerFieldToJson
-            .nullableEnumList(nullableEnumList as List<TestEnum>?),
+            .nullableEnumList(nullableEnumList! as List<TestEnum>?),
       if (nullableEnumListFieldValue != null)
         _$NestedFieldMap['nullableEnumList']!: nullableEnumListFieldValue,
     };
@@ -1960,52 +1962,52 @@ class _$NestedDocumentReference
     final json = {
       if (simple != _sentinel)
         _$NestedFieldMap['simple']!:
-            _$NestedPerFieldToJson.simple(simple as int?),
+            _$NestedPerFieldToJson.simple(simple! as int?),
       if (simpleFieldValue != null)
         _$NestedFieldMap['simple']!: simpleFieldValue,
       if (boolList != _sentinel)
         _$NestedFieldMap['boolList']!:
-            _$NestedPerFieldToJson.boolList(boolList as List<bool>?),
+            _$NestedPerFieldToJson.boolList(boolList! as List<bool>?),
       if (boolListFieldValue != null)
         _$NestedFieldMap['boolList']!: boolListFieldValue,
       if (stringList != _sentinel)
         _$NestedFieldMap['stringList']!:
-            _$NestedPerFieldToJson.stringList(stringList as List<String>?),
+            _$NestedPerFieldToJson.stringList(stringList! as List<String>?),
       if (stringListFieldValue != null)
         _$NestedFieldMap['stringList']!: stringListFieldValue,
       if (numList != _sentinel)
         _$NestedFieldMap['numList']!:
-            _$NestedPerFieldToJson.numList(numList as List<num>?),
+            _$NestedPerFieldToJson.numList(numList! as List<num>?),
       if (numListFieldValue != null)
         _$NestedFieldMap['numList']!: numListFieldValue,
       if (objectList != _sentinel)
         _$NestedFieldMap['objectList']!:
-            _$NestedPerFieldToJson.objectList(objectList as List<Object?>?),
+            _$NestedPerFieldToJson.objectList(objectList! as List<Object?>?),
       if (objectListFieldValue != null)
         _$NestedFieldMap['objectList']!: objectListFieldValue,
       if (dynamicList != _sentinel)
         _$NestedFieldMap['dynamicList']!:
-            _$NestedPerFieldToJson.dynamicList(dynamicList as List<dynamic>?),
+            _$NestedPerFieldToJson.dynamicList(dynamicList! as List<dynamic>?),
       if (dynamicListFieldValue != null)
         _$NestedFieldMap['dynamicList']!: dynamicListFieldValue,
       if (enumValue != _sentinel)
         _$NestedFieldMap['enumValue']!:
-            _$NestedPerFieldToJson.enumValue(enumValue as TestEnum),
+            _$NestedPerFieldToJson.enumValue(enumValue! as TestEnum),
       if (enumValueFieldValue != null)
         _$NestedFieldMap['enumValue']!: enumValueFieldValue,
       if (nullableEnumValue != _sentinel)
         _$NestedFieldMap['nullableEnumValue']!: _$NestedPerFieldToJson
-            .nullableEnumValue(nullableEnumValue as TestEnum?),
+            .nullableEnumValue(nullableEnumValue! as TestEnum?),
       if (nullableEnumValueFieldValue != null)
         _$NestedFieldMap['nullableEnumValue']!: nullableEnumValueFieldValue,
       if (enumList != _sentinel)
         _$NestedFieldMap['enumList']!:
-            _$NestedPerFieldToJson.enumList(enumList as List<TestEnum>),
+            _$NestedPerFieldToJson.enumList(enumList! as List<TestEnum>),
       if (enumListFieldValue != null)
         _$NestedFieldMap['enumList']!: enumListFieldValue,
       if (nullableEnumList != _sentinel)
         _$NestedFieldMap['nullableEnumList']!: _$NestedPerFieldToJson
-            .nullableEnumList(nullableEnumList as List<TestEnum>?),
+            .nullableEnumList(nullableEnumList! as List<TestEnum>?),
       if (nullableEnumListFieldValue != null)
         _$NestedFieldMap['nullableEnumList']!: nullableEnumListFieldValue,
     };
@@ -5226,7 +5228,7 @@ class _$OptionalJsonDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$OptionalJsonFieldMap['value']!:
-            _$OptionalJsonPerFieldToJson.value(value as int),
+            _$OptionalJsonPerFieldToJson.value(value! as int),
       if (valueFieldValue != null)
         _$OptionalJsonFieldMap['value']!: valueFieldValue,
     };
@@ -5246,7 +5248,7 @@ class _$OptionalJsonDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$OptionalJsonFieldMap['value']!:
-            _$OptionalJsonPerFieldToJson.value(value as int),
+            _$OptionalJsonPerFieldToJson.value(value! as int),
       if (valueFieldValue != null)
         _$OptionalJsonFieldMap['value']!: valueFieldValue,
     };
@@ -6016,7 +6018,7 @@ class _$MixedJsonDocumentReference
     final json = {
       if (value != _sentinel)
         _$MixedJsonFieldMap['value']!:
-            _$MixedJsonPerFieldToJson.value(value as int),
+            _$MixedJsonPerFieldToJson.value(value! as int),
       if (valueFieldValue != null)
         _$MixedJsonFieldMap['value']!: valueFieldValue,
     };
@@ -6036,7 +6038,7 @@ class _$MixedJsonDocumentReference
     final json = {
       if (value != _sentinel)
         _$MixedJsonFieldMap['value']!:
-            _$MixedJsonPerFieldToJson.value(value as int),
+            _$MixedJsonPerFieldToJson.value(value! as int),
       if (valueFieldValue != null)
         _$MixedJsonFieldMap['value']!: valueFieldValue,
     };
@@ -6848,12 +6850,12 @@ class _$RootDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$RootFieldMap['nonNullable']!:
-            _$RootPerFieldToJson.nonNullable(nonNullable as String),
+            _$RootPerFieldToJson.nonNullable(nonNullable! as String),
       if (nonNullableFieldValue != null)
         _$RootFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$RootFieldMap['nullable']!:
-            _$RootPerFieldToJson.nullable(nullable as int?),
+            _$RootPerFieldToJson.nullable(nullable! as int?),
       if (nullableFieldValue != null)
         _$RootFieldMap['nullable']!: nullableFieldValue,
     };
@@ -6879,12 +6881,12 @@ class _$RootDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$RootFieldMap['nonNullable']!:
-            _$RootPerFieldToJson.nonNullable(nonNullable as String),
+            _$RootPerFieldToJson.nonNullable(nonNullable! as String),
       if (nonNullableFieldValue != null)
         _$RootFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$RootFieldMap['nullable']!:
-            _$RootPerFieldToJson.nullable(nullable as int?),
+            _$RootPerFieldToJson.nullable(nullable! as int?),
       if (nullableFieldValue != null)
         _$RootFieldMap['nullable']!: nullableFieldValue,
     };
@@ -7805,12 +7807,12 @@ class _$SubDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$SubFieldMap['nonNullable']!:
-            _$SubPerFieldToJson.nonNullable(nonNullable as String),
+            _$SubPerFieldToJson.nonNullable(nonNullable! as String),
       if (nonNullableFieldValue != null)
         _$SubFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$SubFieldMap['nullable']!:
-            _$SubPerFieldToJson.nullable(nullable as int?),
+            _$SubPerFieldToJson.nullable(nullable! as int?),
       if (nullableFieldValue != null)
         _$SubFieldMap['nullable']!: nullableFieldValue,
     };
@@ -7836,12 +7838,12 @@ class _$SubDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$SubFieldMap['nonNullable']!:
-            _$SubPerFieldToJson.nonNullable(nonNullable as String),
+            _$SubPerFieldToJson.nonNullable(nonNullable! as String),
       if (nonNullableFieldValue != null)
         _$SubFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$SubFieldMap['nullable']!:
-            _$SubPerFieldToJson.nullable(nullable as int?),
+            _$SubPerFieldToJson.nullable(nullable! as int?),
       if (nullableFieldValue != null)
         _$SubFieldMap['nullable']!: nullableFieldValue,
     };
@@ -8757,7 +8759,7 @@ class _$AsCamelCaseDocumentReference
     final json = {
       if (value != _sentinel)
         _$AsCamelCaseFieldMap['value']!:
-            _$AsCamelCasePerFieldToJson.value(value as num),
+            _$AsCamelCasePerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$AsCamelCaseFieldMap['value']!: valueFieldValue,
     };
@@ -8777,7 +8779,7 @@ class _$AsCamelCaseDocumentReference
     final json = {
       if (value != _sentinel)
         _$AsCamelCaseFieldMap['value']!:
-            _$AsCamelCasePerFieldToJson.value(value as num),
+            _$AsCamelCasePerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$AsCamelCaseFieldMap['value']!: valueFieldValue,
     };
@@ -9570,7 +9572,7 @@ class _$CustomSubNameDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomSubNameFieldMap['value']!:
-            _$CustomSubNamePerFieldToJson.value(value as num),
+            _$CustomSubNamePerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$CustomSubNameFieldMap['value']!: valueFieldValue,
     };
@@ -9590,7 +9592,7 @@ class _$CustomSubNameDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomSubNameFieldMap['value']!:
-            _$CustomSubNamePerFieldToJson.value(value as num),
+            _$CustomSubNamePerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$CustomSubNameFieldMap['value']!: valueFieldValue,
     };
@@ -10388,7 +10390,7 @@ class _$ThisIsACustomPrefixDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomClassPrefixFieldMap['value']!:
-            _$CustomClassPrefixPerFieldToJson.value(value as num),
+            _$CustomClassPrefixPerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$CustomClassPrefixFieldMap['value']!: valueFieldValue,
     };
@@ -10408,7 +10410,7 @@ class _$ThisIsACustomPrefixDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomClassPrefixFieldMap['value']!:
-            _$CustomClassPrefixPerFieldToJson.value(value as num),
+            _$CustomClassPrefixPerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$CustomClassPrefixFieldMap['value']!: valueFieldValue,
     };
@@ -11198,7 +11200,7 @@ class _$ExplicitPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitPathFieldMap['value']!:
-            _$ExplicitPathPerFieldToJson.value(value as num),
+            _$ExplicitPathPerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$ExplicitPathFieldMap['value']!: valueFieldValue,
     };
@@ -11218,7 +11220,7 @@ class _$ExplicitPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitPathFieldMap['value']!:
-            _$ExplicitPathPerFieldToJson.value(value as num),
+            _$ExplicitPathPerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$ExplicitPathFieldMap['value']!: valueFieldValue,
     };
@@ -12012,7 +12014,7 @@ class _$ExplicitSubPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitSubPathFieldMap['value']!:
-            _$ExplicitSubPathPerFieldToJson.value(value as num),
+            _$ExplicitSubPathPerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$ExplicitSubPathFieldMap['value']!: valueFieldValue,
     };
@@ -12032,7 +12034,7 @@ class _$ExplicitSubPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitSubPathFieldMap['value']!:
-            _$ExplicitSubPathPerFieldToJson.value(value as num),
+            _$ExplicitSubPathPerFieldToJson.value(value! as num),
       if (valueFieldValue != null)
         _$ExplicitSubPathFieldMap['value']!: valueFieldValue,
     };

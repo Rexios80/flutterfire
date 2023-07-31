@@ -188,7 +188,7 @@ class _$DateTimeQueryDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (time != _sentinel)
         _$DateTimeQueryFieldMap['time']!:
-            _$DateTimeQueryPerFieldToJson.time(time as DateTime),
+            _$DateTimeQueryPerFieldToJson.time(time! as DateTime),
       if (timeFieldValue != null)
         _$DateTimeQueryFieldMap['time']!: timeFieldValue,
     };
@@ -208,7 +208,7 @@ class _$DateTimeQueryDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (time != _sentinel)
         _$DateTimeQueryFieldMap['time']!:
-            _$DateTimeQueryPerFieldToJson.time(time as DateTime),
+            _$DateTimeQueryPerFieldToJson.time(time! as DateTime),
       if (timeFieldValue != null)
         _$DateTimeQueryFieldMap['time']!: timeFieldValue,
     };
@@ -986,7 +986,7 @@ class _$TimestampQueryDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (time != _sentinel)
         _$TimestampQueryFieldMap['time']!:
-            _$TimestampQueryPerFieldToJson.time(time as Timestamp),
+            _$TimestampQueryPerFieldToJson.time(time! as Timestamp),
       if (timeFieldValue != null)
         _$TimestampQueryFieldMap['time']!: timeFieldValue,
     };
@@ -1006,7 +1006,7 @@ class _$TimestampQueryDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (time != _sentinel)
         _$TimestampQueryFieldMap['time']!:
-            _$TimestampQueryPerFieldToJson.time(time as Timestamp),
+            _$TimestampQueryPerFieldToJson.time(time! as Timestamp),
       if (timeFieldValue != null)
         _$TimestampQueryFieldMap['time']!: timeFieldValue,
     };
@@ -1786,7 +1786,7 @@ class _$GeoPointQueryDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (point != _sentinel)
         _$GeoPointQueryFieldMap['point']!:
-            _$GeoPointQueryPerFieldToJson.point(point as GeoPoint),
+            _$GeoPointQueryPerFieldToJson.point(point! as GeoPoint),
       if (pointFieldValue != null)
         _$GeoPointQueryFieldMap['point']!: pointFieldValue,
     };
@@ -1806,7 +1806,7 @@ class _$GeoPointQueryDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (point != _sentinel)
         _$GeoPointQueryFieldMap['point']!:
-            _$GeoPointQueryPerFieldToJson.point(point as GeoPoint),
+            _$GeoPointQueryPerFieldToJson.point(point! as GeoPoint),
       if (pointFieldValue != null)
         _$GeoPointQueryFieldMap['point']!: pointFieldValue,
     };
@@ -2594,7 +2594,7 @@ class _$DocumentReferenceQueryDocumentReference
       if (ref != _sentinel)
         _$DocumentReferenceQueryFieldMap['ref']!:
             _$DocumentReferenceQueryPerFieldToJson
-                .ref(ref as DocumentReference<Map<String, dynamic>>),
+                .ref(ref! as DocumentReference<Map<String, dynamic>>),
       if (refFieldValue != null)
         _$DocumentReferenceQueryFieldMap['ref']!: refFieldValue,
     };
@@ -2615,7 +2615,7 @@ class _$DocumentReferenceQueryDocumentReference
       if (ref != _sentinel)
         _$DocumentReferenceQueryFieldMap['ref']!:
             _$DocumentReferenceQueryPerFieldToJson
-                .ref(ref as DocumentReference<Map<String, dynamic>>),
+                .ref(ref! as DocumentReference<Map<String, dynamic>>),
       if (refFieldValue != null)
         _$DocumentReferenceQueryFieldMap['ref']!: refFieldValue,
     };

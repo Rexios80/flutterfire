@@ -88,6 +88,7 @@ class CollectionData with Names {
   CollectionData({
     required this.type,
     required this.hasFreezed,
+    required this.hasPerFieldToJson,
     required String? collectionName,
     required this.collectionPrefix,
     required this.path,
@@ -117,8 +118,12 @@ class CollectionData with Names {
 
     final type = CollectionData.modelTypeOfAnnotation(annotation);
 
-    final hasJsonSerializable =
-        jsonSerializableChecker.hasAnnotationOf(type.element!);
+    final jsonSerializable =
+        jsonSerializableChecker.firstAnnotationOf(type.element!);
+    final hasJsonSerializable = jsonSerializable != null;
+    final hasPerFieldToJson =
+        jsonSerializable?.getField('createPerFieldToJson')?.toBoolValue() ??
+            false;
 
     if (type is DynamicType) {
       throw InvalidGenerationSourceError(
@@ -233,6 +238,7 @@ represents the content of the collection must be in the same file.
     final data = CollectionData(
       type: type,
       hasFreezed: hasFreezed,
+      hasPerFieldToJson: hasPerFieldToJson,
       path: path,
       collectionName: name,
       collectionPrefix: prefix,
@@ -269,8 +275,9 @@ represents the content of the collection must be in the same file.
             .where((f) => !f.hasId())
             .where((f) => !f.isJsonIgnored())
             .map(
-          (e) {
-            var key = "'${e.name}'";
+          (f) {
+            _assertValidJsonAnnotation(f.type, hasPerFieldToJson: hasPerFieldToJson);
+            var key = "'${f.name}'";
 
             if (hasFreezed) {
               key =
@@ -280,7 +287,7 @@ represents the content of the collection must be in the same file.
               key = '_\$${collectionTargetElement.name.public}FieldMap[$key]!';
             }
 
-            return QueryingField(e.name, e.type, updatable: true, field: key);
+            return QueryingField(f.name, f.type, updatable: true, field: key);
           },
         ).toList(),
       ],
@@ -334,6 +341,22 @@ represents the content of the collection must be in the same file.
     }
   }
 
+  static void _assertValidJsonAnnotation(
+    DartType type, {
+    required bool hasPerFieldToJson,
+  }) {
+    final isEnumField = type.isEnum;
+    final hasEnumTypeArg = type.isDartCoreIterable &&
+        (type as InterfaceType).typeArguments.any((e) => e.isEnum);
+
+    if ((isEnumField || hasEnumTypeArg) && !hasPerFieldToJson) {
+      throw InvalidGenerationSourceError(
+        'The annotation @JsonSerializable was used with an enum field, but '
+        'createPerFieldToJson was not set to true.',
+      );
+    }
+  }
+
   static DartType modelTypeOfAnnotation(DartObject annotation) {
     return (annotation.type! as ParameterizedType).typeArguments.first;
   }
@@ -364,8 +387,12 @@ represents the content of the collection must be in the same file.
       [tearoff, cast, list].where((e) => e).length <= 1,
       'Only one of tearoff, cast, list can be true',
     );
-
     parameter ??= field.name;
+
+    if (!hasPerFieldToJson) {
+      return parameter;
+    }
+
     final type = this.type.getDisplayString(withNullability: false);
     final perFieldToJson =
         hasFreezed ? '_\$\$_${type}PerFieldToJson' : '_\$${type}PerFieldToJson';
@@ -373,7 +400,7 @@ represents the content of the collection must be in the same file.
     if (tearoff) {
       return mapping;
     } else if (cast) {
-      return '$mapping($parameter as ${field.type})';
+      return '$mapping($parameter! as ${field.type})';
     } else if (list) {
       return '($mapping([$parameter]) as List?)!.first';
     } else {
@@ -387,6 +414,7 @@ represents the content of the collection must be in the same file.
   final DartType type;
 
   final bool hasFreezed;
+  final bool hasPerFieldToJson;
   final String collectionName;
   final String path;
   final String? idKey;
