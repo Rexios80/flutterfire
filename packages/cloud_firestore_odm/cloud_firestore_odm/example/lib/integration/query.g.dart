@@ -548,8 +548,8 @@ class _$DateTimeQueryQuery
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );
@@ -1328,8 +1328,8 @@ class _$TimestampQueryQuery
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );
@@ -2109,8 +2109,8 @@ class _$GeoPointQueryQuery
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );
@@ -2900,8 +2900,8 @@ class _$DocumentReferenceQueryQuery extends QueryReference<
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );

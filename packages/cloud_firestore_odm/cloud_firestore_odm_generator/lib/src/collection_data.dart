@@ -383,13 +383,14 @@ represents the content of the collection must be in the same file.
     QueryingField field, {
     String? parameter,
     bool nullable = false,
-    bool tearoff = false,
     bool cast = false,
     bool list = false,
+    // This is a single element, but the field is a list
+    bool listed = false,
   }) {
     assert(
-      [tearoff, cast, list].where((e) => e).length <= 1,
-      'Only one of tearoff, cast, list can be true',
+      [cast, list, listed].where((e) => e).length <= 1,
+      'Only one of cast, list, listed can be true',
     );
     parameter ??= field.name;
 
@@ -398,18 +399,17 @@ represents the content of the collection must be in the same file.
     }
 
     final type = this.type.getDisplayString(withNullability: false);
-    print('mapParameter $type hasFreezed: $hasFreezed');
     final perFieldToJson =
         hasFreezed ? '_\$\$_${type}PerFieldToJson' : '_\$${type}PerFieldToJson';
     var mapping = '$perFieldToJson.${field.name}';
-    if (tearoff) {
-      // Do nothing
-    } else if (cast) {
-      return '$mapping($parameter! as ${field.type})';
+    if (cast) {
+      mapping = '$mapping($parameter! as ${field.type})';
     } else if (list) {
-      return '($mapping([$parameter]) as List?)!.first';
+      mapping = '$parameter?.map($mapping).toList()';
+    } else if (listed) {
+      mapping = '($mapping([$parameter]) as List?)!.first';
     } else {
-      return '$mapping($parameter)';
+      mapping = '$mapping($parameter)';
     }
 
     if (nullable) {

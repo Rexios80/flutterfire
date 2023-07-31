@@ -580,8 +580,8 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );
@@ -609,8 +609,8 @@ class _$PersonQuery extends QueryReference<Person, PersonQuerySnapshot>
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );
@@ -1457,8 +1457,8 @@ class _$PublicRedirectedQuery
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );

@@ -558,8 +558,8 @@ class _$ConflictQuery extends QueryReference<Conflict, ConflictQuerySnapshot>
         isGreaterThan: isGreaterThan,
         isGreaterThanOrEqualTo: isGreaterThanOrEqualTo,
         isNull: isNull,
-        whereIn: whereIn?.map((e) => e).toList(),
-        whereNotIn: whereNotIn?.map((e) => e).toList(),
+        whereIn: whereIn,
+        whereNotIn: whereNotIn,
       ),
       $queryCursor: $queryCursor,
     );

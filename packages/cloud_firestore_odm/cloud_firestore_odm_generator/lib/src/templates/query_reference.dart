@@ -409,9 +409,9 @@ class ${data.queryReferenceImplName}
         if (field.name == 'documentId' || rawParameters.contains(e)) {
           return '$e: $e,';
         } else if (listParameters.contains(e)) {
-          return '$e: $e?.map((e) => ${data.mapParameter(field, parameter: 'e', tearoff: true)}).toList(),';
+          return '$e: ${data.mapParameter(field, parameter: e, list: true)},';
         } else if (listedParameters.contains(e)) {
-          return '$e: ${data.mapParameter(field, parameter: e, nullable: true, list: true)},';
+          return '$e: ${data.mapParameter(field, parameter: e, nullable: true, listed: true)},';
         } else {
           return '$e: ${data.mapParameter(field, parameter: e, nullable: true)},';
         }
