@@ -276,7 +276,8 @@ represents the content of the collection must be in the same file.
             .where((f) => !f.isJsonIgnored())
             .map(
           (f) {
-            _assertValidJsonAnnotation(f.type, hasPerFieldToJson: hasPerFieldToJson);
+            _assertValidJsonAnnotation(f.type,
+                hasPerFieldToJson: hasPerFieldToJson);
             var key = "'${f.name}'";
 
             if (hasFreezed) {
@@ -394,6 +395,7 @@ represents the content of the collection must be in the same file.
     }
 
     final type = this.type.getDisplayString(withNullability: false);
+    print('mapParameter $type hasFreezed: $hasFreezed');
     final perFieldToJson =
         hasFreezed ? '_\$\$_${type}PerFieldToJson' : '_\$${type}PerFieldToJson';
     final mapping = '$perFieldToJson.${field.name}';

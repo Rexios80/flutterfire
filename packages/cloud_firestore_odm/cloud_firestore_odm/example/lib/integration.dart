@@ -63,7 +63,7 @@ class AdvancedJson {
 
 // This tests that the generated code compiles
 @Collection<_PrivateAdvancedJson>('firestore-example-app/test/private-advanced')
-@JsonSerializable(fieldRename: FieldRename.snake, createPerFieldToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _PrivateAdvancedJson {
   _PrivateAdvancedJson({
     this.firstName,
