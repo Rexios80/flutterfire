@@ -379,44 +379,13 @@ represents the content of the collection must be in the same file.
     // TODO filter list other than List<string|bool|num>
   }
 
-  String mapParameter(
-    QueryingField field, {
-    String? parameter,
-    bool nullable = false,
-    bool cast = false,
-    bool list = false,
-    // This is a single element, but the field is a list
-    bool listed = false,
-  }) {
-    assert(
-      [cast, list, listed].where((e) => e).length <= 1,
-      'Only one of cast, list, listed can be true',
-    );
-    parameter ??= field.name;
-
-    if (!hasPerFieldToJson) {
-      return parameter;
-    }
+  String? perFieldToJson(QueryingField field) {
+    if (!hasPerFieldToJson) return null;
 
     final type = this.type.getDisplayString(withNullability: false);
-    final perFieldToJson =
-        hasFreezed ? '_\$\$_${type}PerFieldToJson' : '_\$${type}PerFieldToJson';
-    var mapping = '$perFieldToJson.${field.name}';
-    if (cast) {
-      mapping = '$mapping($parameter! as ${field.type})';
-    } else if (list) {
-      mapping = '$parameter?.map($mapping).toList()';
-    } else if (listed) {
-      mapping = '($mapping([$parameter]) as List?)!.first';
-    } else {
-      mapping = '$mapping($parameter)';
-    }
-
-    if (nullable) {
-      mapping = '$parameter != null ? $mapping : null';
-    }
-
-    return mapping;
+    return hasFreezed
+        ? '_\$\$_${type}PerFieldToJson.${field.name}'
+        : '_\$${type}PerFieldToJson.${field.name}';
   }
 
   @override

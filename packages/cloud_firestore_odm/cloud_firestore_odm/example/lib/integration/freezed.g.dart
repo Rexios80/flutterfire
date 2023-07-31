@@ -190,10 +190,12 @@ class _$PersonDocumentReference
       "Cannot specify both lastName and lastNameFieldValue",
     );
     final json = {
-      if (firstName != _sentinel) _$$_PersonFieldMap['firstName']!: firstName,
+      if (firstName != _sentinel)
+        _$$_PersonFieldMap['firstName']!: firstName as String,
       if (firstNameFieldValue != null)
         _$$_PersonFieldMap['firstName']!: firstNameFieldValue,
-      if (lastName != _sentinel) _$$_PersonFieldMap['lastName']!: lastName,
+      if (lastName != _sentinel)
+        _$$_PersonFieldMap['lastName']!: lastName as String,
       if (lastNameFieldValue != null)
         _$$_PersonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -217,10 +219,12 @@ class _$PersonDocumentReference
       "Cannot specify both lastName and lastNameFieldValue",
     );
     final json = {
-      if (firstName != _sentinel) _$$_PersonFieldMap['firstName']!: firstName,
+      if (firstName != _sentinel)
+        _$$_PersonFieldMap['firstName']!: firstName as String,
       if (firstNameFieldValue != null)
         _$$_PersonFieldMap['firstName']!: firstNameFieldValue,
-      if (lastName != _sentinel) _$$_PersonFieldMap['lastName']!: lastName,
+      if (lastName != _sentinel)
+        _$$_PersonFieldMap['lastName']!: lastName as String,
       if (lastNameFieldValue != null)
         _$$_PersonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -1097,7 +1101,8 @@ class _$PublicRedirectedDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel) _$$PublicRedirected2FieldMap['value']!: value,
+      if (value != _sentinel)
+        _$$PublicRedirected2FieldMap['value']!: value as String,
       if (valueFieldValue != null)
         _$$PublicRedirected2FieldMap['value']!: valueFieldValue,
     };
@@ -1115,7 +1120,8 @@ class _$PublicRedirectedDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel) _$$PublicRedirected2FieldMap['value']!: value,
+      if (value != _sentinel)
+        _$$PublicRedirected2FieldMap['value']!: value as String,
       if (valueFieldValue != null)
         _$$PublicRedirected2FieldMap['value']!: valueFieldValue,
     };

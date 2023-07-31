@@ -186,7 +186,7 @@ class _$DateTimeQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel) _$DateTimeQueryFieldMap['time']!: time,
+      if (time != _sentinel) _$DateTimeQueryFieldMap['time']!: time as DateTime,
       if (timeFieldValue != null)
         _$DateTimeQueryFieldMap['time']!: timeFieldValue,
     };
@@ -204,7 +204,7 @@ class _$DateTimeQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel) _$DateTimeQueryFieldMap['time']!: time,
+      if (time != _sentinel) _$DateTimeQueryFieldMap['time']!: time as DateTime,
       if (timeFieldValue != null)
         _$DateTimeQueryFieldMap['time']!: timeFieldValue,
     };
@@ -966,7 +966,8 @@ class _$TimestampQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel) _$TimestampQueryFieldMap['time']!: time,
+      if (time != _sentinel)
+        _$TimestampQueryFieldMap['time']!: time as Timestamp,
       if (timeFieldValue != null)
         _$TimestampQueryFieldMap['time']!: timeFieldValue,
     };
@@ -984,7 +985,8 @@ class _$TimestampQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both time and timeFieldValue",
     );
     final json = {
-      if (time != _sentinel) _$TimestampQueryFieldMap['time']!: time,
+      if (time != _sentinel)
+        _$TimestampQueryFieldMap['time']!: time as Timestamp,
       if (timeFieldValue != null)
         _$TimestampQueryFieldMap['time']!: timeFieldValue,
     };
@@ -1747,7 +1749,8 @@ class _$GeoPointQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both point and pointFieldValue",
     );
     final json = {
-      if (point != _sentinel) _$GeoPointQueryFieldMap['point']!: point,
+      if (point != _sentinel)
+        _$GeoPointQueryFieldMap['point']!: point as GeoPoint,
       if (pointFieldValue != null)
         _$GeoPointQueryFieldMap['point']!: pointFieldValue,
     };
@@ -1765,7 +1768,8 @@ class _$GeoPointQueryDocumentReference extends FirestoreDocumentReference<
       "Cannot specify both point and pointFieldValue",
     );
     final json = {
-      if (point != _sentinel) _$GeoPointQueryFieldMap['point']!: point,
+      if (point != _sentinel)
+        _$GeoPointQueryFieldMap['point']!: point as GeoPoint,
       if (pointFieldValue != null)
         _$GeoPointQueryFieldMap['point']!: pointFieldValue,
     };
@@ -2535,7 +2539,9 @@ class _$DocumentReferenceQueryDocumentReference
       "Cannot specify both ref and refFieldValue",
     );
     final json = {
-      if (ref != _sentinel) _$DocumentReferenceQueryFieldMap['ref']!: ref,
+      if (ref != _sentinel)
+        _$DocumentReferenceQueryFieldMap['ref']!:
+            ref as DocumentReference<Map<String, dynamic>>,
       if (refFieldValue != null)
         _$DocumentReferenceQueryFieldMap['ref']!: refFieldValue,
     };
@@ -2553,7 +2559,9 @@ class _$DocumentReferenceQueryDocumentReference
       "Cannot specify both ref and refFieldValue",
     );
     final json = {
-      if (ref != _sentinel) _$DocumentReferenceQueryFieldMap['ref']!: ref,
+      if (ref != _sentinel)
+        _$DocumentReferenceQueryFieldMap['ref']!:
+            ref as DocumentReference<Map<String, dynamic>>,
       if (refFieldValue != null)
         _$DocumentReferenceQueryFieldMap['ref']!: refFieldValue,
     };

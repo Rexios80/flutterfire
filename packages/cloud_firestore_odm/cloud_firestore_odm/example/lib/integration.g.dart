@@ -180,7 +180,7 @@ class _$ManualJsonDocumentReference
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel) 'value': value,
+      if (value != _sentinel) 'value': value as String,
       if (valueFieldValue != null) 'value': valueFieldValue,
     };
 
@@ -197,7 +197,7 @@ class _$ManualJsonDocumentReference
       "Cannot specify both value and valueFieldValue",
     );
     final json = {
-      if (value != _sentinel) 'value': value,
+      if (value != _sentinel) 'value': value as String,
       if (valueFieldValue != null) 'value': valueFieldValue,
     };
 
@@ -962,10 +962,11 @@ class _$AdvancedJsonDocumentReference extends FirestoreDocumentReference<
     );
     final json = {
       if (firstName != _sentinel)
-        _$AdvancedJsonFieldMap['firstName']!: firstName,
+        _$AdvancedJsonFieldMap['firstName']!: firstName as String?,
       if (firstNameFieldValue != null)
         _$AdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
-      if (lastName != _sentinel) _$AdvancedJsonFieldMap['lastName']!: lastName,
+      if (lastName != _sentinel)
+        _$AdvancedJsonFieldMap['lastName']!: lastName as String?,
       if (lastNameFieldValue != null)
         _$AdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -990,10 +991,11 @@ class _$AdvancedJsonDocumentReference extends FirestoreDocumentReference<
     );
     final json = {
       if (firstName != _sentinel)
-        _$AdvancedJsonFieldMap['firstName']!: firstName,
+        _$AdvancedJsonFieldMap['firstName']!: firstName as String?,
       if (firstNameFieldValue != null)
         _$AdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
-      if (lastName != _sentinel) _$AdvancedJsonFieldMap['lastName']!: lastName,
+      if (lastName != _sentinel)
+        _$AdvancedJsonFieldMap['lastName']!: lastName as String?,
       if (lastNameFieldValue != null)
         _$AdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -1897,11 +1899,11 @@ class _$_PrivateAdvancedJsonDocumentReference
     );
     final json = {
       if (firstName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['firstName']!: firstName,
+        _$PrivateAdvancedJsonFieldMap['firstName']!: firstName as String?,
       if (firstNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['lastName']!: lastName,
+        _$PrivateAdvancedJsonFieldMap['lastName']!: lastName as String?,
       if (lastNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };
@@ -1926,11 +1928,11 @@ class _$_PrivateAdvancedJsonDocumentReference
     );
     final json = {
       if (firstName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['firstName']!: firstName,
+        _$PrivateAdvancedJsonFieldMap['firstName']!: firstName as String?,
       if (firstNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['firstName']!: firstNameFieldValue,
       if (lastName != _sentinel)
-        _$PrivateAdvancedJsonFieldMap['lastName']!: lastName,
+        _$PrivateAdvancedJsonFieldMap['lastName']!: lastName as String?,
       if (lastNameFieldValue != null)
         _$PrivateAdvancedJsonFieldMap['lastName']!: lastNameFieldValue,
     };

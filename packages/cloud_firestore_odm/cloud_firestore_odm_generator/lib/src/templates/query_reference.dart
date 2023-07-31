@@ -398,22 +398,24 @@ class ${data.queryReferenceImplName}
         }
       };
 
-      final rawParameters = {'isNull'};
-      final listParameters = {'arrayContainsAny', 'whereIn', 'whereNotIn'};
-      final listedParameters = {'arrayContains'};
-
       final prototype =
           operators.entries.map((e) => '${e.value} ${e.key},').join();
 
+      final perFieldToJson = data.perFieldToJson(field);
+
       final parameters = operators.keys.map((e) {
-        if (field.name == 'documentId' || rawParameters.contains(e)) {
+        if (perFieldToJson == null) {
           return '$e: $e,';
-        } else if (listParameters.contains(e)) {
-          return '$e: ${data.mapParameter(field, parameter: e, list: true)},';
-        } else if (listedParameters.contains(e)) {
-          return '$e: ${data.mapParameter(field, parameter: e, nullable: true, listed: true)},';
+        } else if (field.name == 'documentId' || e == 'isNull') {
+          return '$e: $e,';
+        } else if ({'whereIn', 'whereNotIn'}.contains(e)) {
+          return '$e: $e?.map((e) => $perFieldToJson(e)),';
+        } else if (e == 'arrayContainsAny') {
+          return '$e: $e != null ? $perFieldToJson($e) as Iterable<Object>? : null,';
+        } else if (e == 'arrayContains') {
+          return '$e: $e != null ? ($perFieldToJson([$e]) as List?)!.first : null,';
         } else {
-          return '$e: ${data.mapParameter(field, parameter: e, nullable: true)},';
+          return '$e: $e != null ? $perFieldToJson($e) : null,';
         }
       }).join();
 

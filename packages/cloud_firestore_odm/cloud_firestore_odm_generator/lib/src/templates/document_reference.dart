@@ -103,18 +103,32 @@ void transactionUpdate(Transaction transaction, {${parameters.join()}});
     ];
 
     // TODO support nested objects
-    final json = [
-      for (final field in data.updatableFields) ...[
-        '''
-        if (${field.name} != _sentinel)
-          ${field.field}: ${data.mapParameter(field, cast: true)},
-        ''',
+    final json = <String>[];
+    for (final field in data.updatableFields) {
+      final perFieldToJson = data.perFieldToJson(field);
+
+      if (perFieldToJson == null) {
+        json.add(
+          '''
+          if (${field.name} != _sentinel)
+            ${field.field}: ${field.name} as ${field.type},
+          ''',
+        );
+      } else {
+        json.add(
+          '''
+          if (${field.name} != _sentinel)
+            ${field.field}: $perFieldToJson(${field.name} as ${field.type}),
+          ''',
+        );
+      }
+      json.add(
         '''
         if (${field.name}FieldValue != null)
           ${field.field}: ${field.name}FieldValue ,
-        '''
-      ],
-    ];
+        ''',
+      );
+    }
 
     final asserts = [
       for (final field in data.updatableFields)
