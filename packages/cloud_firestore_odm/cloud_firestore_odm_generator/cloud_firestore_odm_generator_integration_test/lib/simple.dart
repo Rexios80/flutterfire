@@ -13,7 +13,7 @@ part 'simple.g.dart';
 final ignoredGetterRef = IgnoredGetterCollectionReference();
 
 @Collection<IgnoredGetter>('firestore-example-app/test/getter')
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class IgnoredGetter {
   IgnoredGetter(this.value);
 
@@ -29,7 +29,7 @@ class IgnoredGetter {
 }
 
 @Collection<Model>('root')
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class Model {
   Model(this.value);
   final String value;
@@ -82,7 +82,7 @@ final nestedRef = NestedCollectionReference();
 @Collection<SplitFileModel>('split-file')
 final splitFileRef = SplitFileModelCollectionReference();
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class EmptyModel {
   EmptyModel();
 
@@ -95,7 +95,7 @@ class EmptyModel {
 @Collection<EmptyModel>('config')
 final emptyModelRef = EmptyModelCollectionReference();
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class MinValidation {
   MinValidation(this.intNbr, this.doubleNbr, this.numNbr) {
     _$assertMinValidation(this);
@@ -111,7 +111,7 @@ class MinValidation {
   final num numNbr;
 }
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class Root {
   Root(this.nonNullable, this.nullable);
 
@@ -123,7 +123,7 @@ class Root {
   Map<String, Object?> toJson() => _$RootToJson(this);
 }
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class OptionalJson {
   OptionalJson(this.value);
 
@@ -133,7 +133,7 @@ class OptionalJson {
 @Collection<OptionalJson>('root')
 final optionalJsonRef = OptionalJsonCollectionReference();
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class MixedJson {
   MixedJson(this.value);
 
@@ -148,7 +148,7 @@ class MixedJson {
 @Collection<MixedJson>('root')
 final mixedJsonRef = MixedJsonCollectionReference();
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class Sub {
   Sub(this.nonNullable, this.nullable);
 
@@ -160,7 +160,7 @@ class Sub {
   Map<String, Object?> toJson() => _$SubToJson(this);
 }
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class CustomSubName {
   CustomSubName(this.value);
 
@@ -172,7 +172,7 @@ class CustomSubName {
   Map<String, Object?> toJson() => _$CustomSubNameToJson(this);
 }
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class AsCamelCase {
   AsCamelCase(this.value);
 
@@ -184,7 +184,7 @@ class AsCamelCase {
   Map<String, Object?> toJson() => _$AsCamelCaseToJson(this);
 }
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class CustomClassPrefix {
   CustomClassPrefix(this.value);
 
@@ -206,7 +206,7 @@ class CustomClassPrefix {
 )
 final rootRef = RootCollectionReference();
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class ExplicitPath {
   ExplicitPath(this.value);
 
@@ -218,7 +218,7 @@ class ExplicitPath {
   Map<String, Object?> toJson() => _$ExplicitPathToJson(this);
 }
 
-@JsonSerializable(createPerFieldToJson: true)
+@JsonSerializable()
 class ExplicitSubPath {
   ExplicitSubPath(this.value);
 

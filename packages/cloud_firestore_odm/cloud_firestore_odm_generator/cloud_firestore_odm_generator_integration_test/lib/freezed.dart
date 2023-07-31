@@ -14,7 +14,7 @@ part 'freezed.g.dart';
 @Collection<Person>('freezed-test')
 @freezed
 class Person with _$Person {
-  @JsonSerializable(fieldRename: FieldRename.snake, createPerFieldToJson: true)
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Person({
     required String firstName,
     @JsonKey(name: 'LAST_NAME') required String lastName,
@@ -29,7 +29,6 @@ final personRef = PersonCollectionReference();
 @Collection<PublicRedirected>('freezed-test')
 @freezed
 class PublicRedirected with _$PublicRedirected {
-  @JsonSerializable(createPerFieldToJson: true)
   factory PublicRedirected({required String value}) = PublicRedirected2;
 
   factory PublicRedirected.fromJson(Map<String, Object?> json) =>

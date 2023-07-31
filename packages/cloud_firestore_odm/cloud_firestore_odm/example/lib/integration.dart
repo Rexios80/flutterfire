@@ -35,7 +35,7 @@ class ManualJson {
 }
 
 @Collection<AdvancedJson>('firestore-example-app/test/advanced')
-@JsonSerializable(fieldRename: FieldRename.snake, createPerFieldToJson: true)
+@JsonSerializable(fieldRename: FieldRename.snake)
 class AdvancedJson {
   AdvancedJson({this.firstName, this.lastName, this.ignored});
 
