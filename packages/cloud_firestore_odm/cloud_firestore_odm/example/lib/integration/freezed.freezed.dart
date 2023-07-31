@@ -279,7 +279,8 @@ class __$$PublicRedirected2CopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(createPerFieldToJson: true)
 class _$PublicRedirected2 implements PublicRedirected2 {
   _$PublicRedirected2({required this.value});
 

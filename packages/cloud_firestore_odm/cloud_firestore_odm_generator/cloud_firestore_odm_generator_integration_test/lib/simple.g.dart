@@ -186,7 +186,7 @@ class _$IgnoredGetterDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$IgnoredGetterFieldMap['value']!:
-            _$IgnoredGetterPerFieldToJson.value(value! as int),
+            _$IgnoredGetterPerFieldToJson.value(value as int),
       if (valueFieldValue != null)
         _$IgnoredGetterFieldMap['value']!: valueFieldValue,
     };
@@ -206,7 +206,7 @@ class _$IgnoredGetterDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$IgnoredGetterFieldMap['value']!:
-            _$IgnoredGetterPerFieldToJson.value(value! as int),
+            _$IgnoredGetterPerFieldToJson.value(value as int),
       if (valueFieldValue != null)
         _$IgnoredGetterFieldMap['value']!: valueFieldValue,
     };
@@ -543,21 +543,29 @@ class _$IgnoredGetterQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$IgnoredGetterFieldMap['value']!,
-        isEqualTo: _$IgnoredGetterPerFieldToJson.value(isEqualTo! as int),
-        isNotEqualTo: _$IgnoredGetterPerFieldToJson.value(isNotEqualTo! as int),
-        isLessThan: _$IgnoredGetterPerFieldToJson.value(isLessThan! as int),
-        isLessThanOrEqualTo:
-            _$IgnoredGetterPerFieldToJson.value(isLessThanOrEqualTo! as int),
-        isGreaterThan:
-            _$IgnoredGetterPerFieldToJson.value(isGreaterThan! as int),
-        isGreaterThanOrEqualTo:
-            _$IgnoredGetterPerFieldToJson.value(isGreaterThanOrEqualTo! as int),
+        isEqualTo: isEqualTo != null
+            ? _$IgnoredGetterPerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$IgnoredGetterPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$IgnoredGetterPerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$IgnoredGetterPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$IgnoredGetterPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$IgnoredGetterPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$IgnoredGetterPerFieldToJson.value(e! as int))
-            .toList(),
+        whereIn:
+            whereIn?.map((e) => _$IgnoredGetterPerFieldToJson.value).toList(),
         whereNotIn: whereNotIn
-            ?.map((e) => _$IgnoredGetterPerFieldToJson.value(e! as int))
+            ?.map((e) => _$IgnoredGetterPerFieldToJson.value)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -968,8 +976,7 @@ class _$ModelDocumentReference
     );
     final json = {
       if (value != _sentinel)
-        _$ModelFieldMap['value']!:
-            _$ModelPerFieldToJson.value(value! as String),
+        _$ModelFieldMap['value']!: _$ModelPerFieldToJson.value(value as String),
       if (valueFieldValue != null) _$ModelFieldMap['value']!: valueFieldValue,
     };
 
@@ -987,8 +994,7 @@ class _$ModelDocumentReference
     );
     final json = {
       if (value != _sentinel)
-        _$ModelFieldMap['value']!:
-            _$ModelPerFieldToJson.value(value! as String),
+        _$ModelFieldMap['value']!: _$ModelPerFieldToJson.value(value as String),
       if (valueFieldValue != null) _$ModelFieldMap['value']!: valueFieldValue,
     };
 
@@ -1318,21 +1324,26 @@ class _$ModelQuery extends QueryReference<Model, ModelQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ModelFieldMap['value']!,
-        isEqualTo: _$ModelPerFieldToJson.value(isEqualTo! as String),
-        isNotEqualTo: _$ModelPerFieldToJson.value(isNotEqualTo! as String),
-        isLessThan: _$ModelPerFieldToJson.value(isLessThan! as String),
-        isLessThanOrEqualTo:
-            _$ModelPerFieldToJson.value(isLessThanOrEqualTo! as String),
-        isGreaterThan: _$ModelPerFieldToJson.value(isGreaterThan! as String),
-        isGreaterThanOrEqualTo:
-            _$ModelPerFieldToJson.value(isGreaterThanOrEqualTo! as String),
+        isEqualTo:
+            isEqualTo != null ? _$ModelPerFieldToJson.value(isEqualTo) : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$ModelPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan:
+            isLessThan != null ? _$ModelPerFieldToJson.value(isLessThan) : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$ModelPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$ModelPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$ModelPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$ModelPerFieldToJson.value(e! as String))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$ModelPerFieldToJson.value(e! as String))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$ModelPerFieldToJson.value).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$ModelPerFieldToJson.value).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -1830,52 +1841,52 @@ class _$NestedDocumentReference
     final json = {
       if (simple != _sentinel)
         _$NestedFieldMap['simple']!:
-            _$NestedPerFieldToJson.simple(simple! as int?),
+            _$NestedPerFieldToJson.simple(simple as int?),
       if (simpleFieldValue != null)
         _$NestedFieldMap['simple']!: simpleFieldValue,
       if (boolList != _sentinel)
         _$NestedFieldMap['boolList']!:
-            _$NestedPerFieldToJson.boolList(boolList! as List<bool>?),
+            _$NestedPerFieldToJson.boolList(boolList as List<bool>?),
       if (boolListFieldValue != null)
         _$NestedFieldMap['boolList']!: boolListFieldValue,
       if (stringList != _sentinel)
         _$NestedFieldMap['stringList']!:
-            _$NestedPerFieldToJson.stringList(stringList! as List<String>?),
+            _$NestedPerFieldToJson.stringList(stringList as List<String>?),
       if (stringListFieldValue != null)
         _$NestedFieldMap['stringList']!: stringListFieldValue,
       if (numList != _sentinel)
         _$NestedFieldMap['numList']!:
-            _$NestedPerFieldToJson.numList(numList! as List<num>?),
+            _$NestedPerFieldToJson.numList(numList as List<num>?),
       if (numListFieldValue != null)
         _$NestedFieldMap['numList']!: numListFieldValue,
       if (objectList != _sentinel)
         _$NestedFieldMap['objectList']!:
-            _$NestedPerFieldToJson.objectList(objectList! as List<Object?>?),
+            _$NestedPerFieldToJson.objectList(objectList as List<Object?>?),
       if (objectListFieldValue != null)
         _$NestedFieldMap['objectList']!: objectListFieldValue,
       if (dynamicList != _sentinel)
         _$NestedFieldMap['dynamicList']!:
-            _$NestedPerFieldToJson.dynamicList(dynamicList! as List<dynamic>?),
+            _$NestedPerFieldToJson.dynamicList(dynamicList as List<dynamic>?),
       if (dynamicListFieldValue != null)
         _$NestedFieldMap['dynamicList']!: dynamicListFieldValue,
       if (enumValue != _sentinel)
         _$NestedFieldMap['enumValue']!:
-            _$NestedPerFieldToJson.enumValue(enumValue! as TestEnum),
+            _$NestedPerFieldToJson.enumValue(enumValue as TestEnum),
       if (enumValueFieldValue != null)
         _$NestedFieldMap['enumValue']!: enumValueFieldValue,
       if (nullableEnumValue != _sentinel)
         _$NestedFieldMap['nullableEnumValue']!: _$NestedPerFieldToJson
-            .nullableEnumValue(nullableEnumValue! as TestEnum?),
+            .nullableEnumValue(nullableEnumValue as TestEnum?),
       if (nullableEnumValueFieldValue != null)
         _$NestedFieldMap['nullableEnumValue']!: nullableEnumValueFieldValue,
       if (enumList != _sentinel)
         _$NestedFieldMap['enumList']!:
-            _$NestedPerFieldToJson.enumList(enumList! as List<TestEnum>),
+            _$NestedPerFieldToJson.enumList(enumList as List<TestEnum>),
       if (enumListFieldValue != null)
         _$NestedFieldMap['enumList']!: enumListFieldValue,
       if (nullableEnumList != _sentinel)
         _$NestedFieldMap['nullableEnumList']!: _$NestedPerFieldToJson
-            .nullableEnumList(nullableEnumList! as List<TestEnum>?),
+            .nullableEnumList(nullableEnumList as List<TestEnum>?),
       if (nullableEnumListFieldValue != null)
         _$NestedFieldMap['nullableEnumList']!: nullableEnumListFieldValue,
     };
@@ -1949,52 +1960,52 @@ class _$NestedDocumentReference
     final json = {
       if (simple != _sentinel)
         _$NestedFieldMap['simple']!:
-            _$NestedPerFieldToJson.simple(simple! as int?),
+            _$NestedPerFieldToJson.simple(simple as int?),
       if (simpleFieldValue != null)
         _$NestedFieldMap['simple']!: simpleFieldValue,
       if (boolList != _sentinel)
         _$NestedFieldMap['boolList']!:
-            _$NestedPerFieldToJson.boolList(boolList! as List<bool>?),
+            _$NestedPerFieldToJson.boolList(boolList as List<bool>?),
       if (boolListFieldValue != null)
         _$NestedFieldMap['boolList']!: boolListFieldValue,
       if (stringList != _sentinel)
         _$NestedFieldMap['stringList']!:
-            _$NestedPerFieldToJson.stringList(stringList! as List<String>?),
+            _$NestedPerFieldToJson.stringList(stringList as List<String>?),
       if (stringListFieldValue != null)
         _$NestedFieldMap['stringList']!: stringListFieldValue,
       if (numList != _sentinel)
         _$NestedFieldMap['numList']!:
-            _$NestedPerFieldToJson.numList(numList! as List<num>?),
+            _$NestedPerFieldToJson.numList(numList as List<num>?),
       if (numListFieldValue != null)
         _$NestedFieldMap['numList']!: numListFieldValue,
       if (objectList != _sentinel)
         _$NestedFieldMap['objectList']!:
-            _$NestedPerFieldToJson.objectList(objectList! as List<Object?>?),
+            _$NestedPerFieldToJson.objectList(objectList as List<Object?>?),
       if (objectListFieldValue != null)
         _$NestedFieldMap['objectList']!: objectListFieldValue,
       if (dynamicList != _sentinel)
         _$NestedFieldMap['dynamicList']!:
-            _$NestedPerFieldToJson.dynamicList(dynamicList! as List<dynamic>?),
+            _$NestedPerFieldToJson.dynamicList(dynamicList as List<dynamic>?),
       if (dynamicListFieldValue != null)
         _$NestedFieldMap['dynamicList']!: dynamicListFieldValue,
       if (enumValue != _sentinel)
         _$NestedFieldMap['enumValue']!:
-            _$NestedPerFieldToJson.enumValue(enumValue! as TestEnum),
+            _$NestedPerFieldToJson.enumValue(enumValue as TestEnum),
       if (enumValueFieldValue != null)
         _$NestedFieldMap['enumValue']!: enumValueFieldValue,
       if (nullableEnumValue != _sentinel)
         _$NestedFieldMap['nullableEnumValue']!: _$NestedPerFieldToJson
-            .nullableEnumValue(nullableEnumValue! as TestEnum?),
+            .nullableEnumValue(nullableEnumValue as TestEnum?),
       if (nullableEnumValueFieldValue != null)
         _$NestedFieldMap['nullableEnumValue']!: nullableEnumValueFieldValue,
       if (enumList != _sentinel)
         _$NestedFieldMap['enumList']!:
-            _$NestedPerFieldToJson.enumList(enumList! as List<TestEnum>),
+            _$NestedPerFieldToJson.enumList(enumList as List<TestEnum>),
       if (enumListFieldValue != null)
         _$NestedFieldMap['enumList']!: enumListFieldValue,
       if (nullableEnumList != _sentinel)
         _$NestedFieldMap['nullableEnumList']!: _$NestedPerFieldToJson
-            .nullableEnumList(nullableEnumList! as List<TestEnum>?),
+            .nullableEnumList(nullableEnumList as List<TestEnum>?),
       if (nullableEnumListFieldValue != null)
         _$NestedFieldMap['nullableEnumList']!: nullableEnumListFieldValue,
     };
@@ -2533,21 +2544,27 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['simple']!,
-        isEqualTo: _$NestedPerFieldToJson.simple(isEqualTo! as int?),
-        isNotEqualTo: _$NestedPerFieldToJson.simple(isNotEqualTo! as int?),
-        isLessThan: _$NestedPerFieldToJson.simple(isLessThan! as int?),
-        isLessThanOrEqualTo:
-            _$NestedPerFieldToJson.simple(isLessThanOrEqualTo! as int?),
-        isGreaterThan: _$NestedPerFieldToJson.simple(isGreaterThan! as int?),
-        isGreaterThanOrEqualTo:
-            _$NestedPerFieldToJson.simple(isGreaterThanOrEqualTo! as int?),
+        isEqualTo:
+            isEqualTo != null ? _$NestedPerFieldToJson.simple(isEqualTo) : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.simple(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.simple(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.simple(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.simple(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.simple(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$NestedPerFieldToJson.simple(e! as int?))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$NestedPerFieldToJson.simple(e! as int?))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$NestedPerFieldToJson.simple).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$NestedPerFieldToJson.simple).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2568,21 +2585,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['boolList']!,
-        isEqualTo: _$NestedPerFieldToJson.boolList(isEqualTo! as List<bool>?),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.boolList(isNotEqualTo! as List<bool>?),
-        isLessThan: _$NestedPerFieldToJson.boolList(isLessThan! as List<bool>?),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .boolList(isLessThanOrEqualTo! as List<bool>?),
-        isGreaterThan:
-            _$NestedPerFieldToJson.boolList(isGreaterThan! as List<bool>?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .boolList(isGreaterThanOrEqualTo! as List<bool>?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.boolList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.boolList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.boolList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.boolList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.boolList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.boolList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains:
-            _$NestedPerFieldToJson.boolList(arrayContains! as List<bool>?),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.boolList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map((e) => _$NestedPerFieldToJson.boolList(e! as List<bool>?))
+            ?.map((e) => _$NestedPerFieldToJson.boolList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2604,23 +2630,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['stringList']!,
-        isEqualTo:
-            _$NestedPerFieldToJson.stringList(isEqualTo! as List<String>?),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.stringList(isNotEqualTo! as List<String>?),
-        isLessThan:
-            _$NestedPerFieldToJson.stringList(isLessThan! as List<String>?),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .stringList(isLessThanOrEqualTo! as List<String>?),
-        isGreaterThan:
-            _$NestedPerFieldToJson.stringList(isGreaterThan! as List<String>?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .stringList(isGreaterThanOrEqualTo! as List<String>?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.stringList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.stringList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.stringList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.stringList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.stringList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.stringList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains:
-            _$NestedPerFieldToJson.stringList(arrayContains! as List<String>?),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.stringList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map((e) => _$NestedPerFieldToJson.stringList(e! as List<String>?))
+            ?.map((e) => _$NestedPerFieldToJson.stringList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2642,21 +2675,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['numList']!,
-        isEqualTo: _$NestedPerFieldToJson.numList(isEqualTo! as List<num>?),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.numList(isNotEqualTo! as List<num>?),
-        isLessThan: _$NestedPerFieldToJson.numList(isLessThan! as List<num>?),
-        isLessThanOrEqualTo:
-            _$NestedPerFieldToJson.numList(isLessThanOrEqualTo! as List<num>?),
-        isGreaterThan:
-            _$NestedPerFieldToJson.numList(isGreaterThan! as List<num>?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .numList(isGreaterThanOrEqualTo! as List<num>?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.numList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.numList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.numList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.numList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.numList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.numList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains:
-            _$NestedPerFieldToJson.numList(arrayContains! as List<num>?),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.numList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map((e) => _$NestedPerFieldToJson.numList(e! as List<num>?))
+            ?.map((e) => _$NestedPerFieldToJson.numList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2678,24 +2720,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['objectList']!,
-        isEqualTo:
-            _$NestedPerFieldToJson.objectList(isEqualTo! as List<Object?>?),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.objectList(isNotEqualTo! as List<Object?>?),
-        isLessThan:
-            _$NestedPerFieldToJson.objectList(isLessThan! as List<Object?>?),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .objectList(isLessThanOrEqualTo! as List<Object?>?),
-        isGreaterThan:
-            _$NestedPerFieldToJson.objectList(isGreaterThan! as List<Object?>?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .objectList(isGreaterThanOrEqualTo! as List<Object?>?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.objectList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.objectList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.objectList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.objectList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.objectList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.objectList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains:
-            _$NestedPerFieldToJson.objectList(arrayContains! as List<Object?>?),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.objectList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map(
-                (e) => _$NestedPerFieldToJson.objectList(e! as List<Object?>?))
+            ?.map((e) => _$NestedPerFieldToJson.objectList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2717,24 +2765,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['dynamicList']!,
-        isEqualTo:
-            _$NestedPerFieldToJson.dynamicList(isEqualTo! as List<dynamic>?),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.dynamicList(isNotEqualTo! as List<dynamic>?),
-        isLessThan:
-            _$NestedPerFieldToJson.dynamicList(isLessThan! as List<dynamic>?),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .dynamicList(isLessThanOrEqualTo! as List<dynamic>?),
-        isGreaterThan: _$NestedPerFieldToJson
-            .dynamicList(isGreaterThan! as List<dynamic>?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .dynamicList(isGreaterThanOrEqualTo! as List<dynamic>?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.dynamicList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.dynamicList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.dynamicList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.dynamicList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.dynamicList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.dynamicList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains: _$NestedPerFieldToJson
-            .dynamicList(arrayContains! as List<dynamic>?),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.dynamicList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map(
-                (e) => _$NestedPerFieldToJson.dynamicList(e! as List<dynamic>?))
+            ?.map((e) => _$NestedPerFieldToJson.dynamicList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2756,23 +2810,28 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['enumValue']!,
-        isEqualTo: _$NestedPerFieldToJson.enumValue(isEqualTo! as TestEnum),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.enumValue(isNotEqualTo! as TestEnum),
-        isLessThan: _$NestedPerFieldToJson.enumValue(isLessThan! as TestEnum),
-        isLessThanOrEqualTo:
-            _$NestedPerFieldToJson.enumValue(isLessThanOrEqualTo! as TestEnum),
-        isGreaterThan:
-            _$NestedPerFieldToJson.enumValue(isGreaterThan! as TestEnum),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .enumValue(isGreaterThanOrEqualTo! as TestEnum),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.enumValue(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.enumValue(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.enumValue(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.enumValue(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.enumValue(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.enumValue(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$NestedPerFieldToJson.enumValue(e! as TestEnum))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$NestedPerFieldToJson.enumValue(e! as TestEnum))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$NestedPerFieldToJson.enumValue).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$NestedPerFieldToJson.enumValue).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -2793,26 +2852,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['nullableEnumValue']!,
-        isEqualTo:
-            _$NestedPerFieldToJson.nullableEnumValue(isEqualTo! as TestEnum?),
-        isNotEqualTo: _$NestedPerFieldToJson
-            .nullableEnumValue(isNotEqualTo! as TestEnum?),
-        isLessThan:
-            _$NestedPerFieldToJson.nullableEnumValue(isLessThan! as TestEnum?),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .nullableEnumValue(isLessThanOrEqualTo! as TestEnum?),
-        isGreaterThan: _$NestedPerFieldToJson
-            .nullableEnumValue(isGreaterThan! as TestEnum?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .nullableEnumValue(isGreaterThanOrEqualTo! as TestEnum?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumValue(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumValue(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.nullableEnumValue(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumValue(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.nullableEnumValue(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumValue(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
         whereIn: whereIn
-            ?.map((e) =>
-                _$NestedPerFieldToJson.nullableEnumValue(e! as TestEnum?))
+            ?.map((e) => _$NestedPerFieldToJson.nullableEnumValue)
             .toList(),
         whereNotIn: whereNotIn
-            ?.map((e) =>
-                _$NestedPerFieldToJson.nullableEnumValue(e! as TestEnum?))
+            ?.map((e) => _$NestedPerFieldToJson.nullableEnumValue)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2834,23 +2897,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['enumList']!,
-        isEqualTo:
-            _$NestedPerFieldToJson.enumList(isEqualTo! as List<TestEnum>),
-        isNotEqualTo:
-            _$NestedPerFieldToJson.enumList(isNotEqualTo! as List<TestEnum>),
-        isLessThan:
-            _$NestedPerFieldToJson.enumList(isLessThan! as List<TestEnum>),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .enumList(isLessThanOrEqualTo! as List<TestEnum>),
-        isGreaterThan:
-            _$NestedPerFieldToJson.enumList(isGreaterThan! as List<TestEnum>),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .enumList(isGreaterThanOrEqualTo! as List<TestEnum>),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.enumList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.enumList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.enumList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.enumList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.enumList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.enumList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains:
-            _$NestedPerFieldToJson.enumList(arrayContains! as List<TestEnum>),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.enumList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map((e) => _$NestedPerFieldToJson.enumList(e! as List<TestEnum>))
+            ?.map((e) => _$NestedPerFieldToJson.enumList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -2872,24 +2942,30 @@ class _$NestedQuery extends QueryReference<Nested, NestedQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$NestedFieldMap['nullableEnumList']!,
-        isEqualTo: _$NestedPerFieldToJson
-            .nullableEnumList(isEqualTo! as List<TestEnum>?),
-        isNotEqualTo: _$NestedPerFieldToJson
-            .nullableEnumList(isNotEqualTo! as List<TestEnum>?),
-        isLessThan: _$NestedPerFieldToJson
-            .nullableEnumList(isLessThan! as List<TestEnum>?),
-        isLessThanOrEqualTo: _$NestedPerFieldToJson
-            .nullableEnumList(isLessThanOrEqualTo! as List<TestEnum>?),
-        isGreaterThan: _$NestedPerFieldToJson
-            .nullableEnumList(isGreaterThan! as List<TestEnum>?),
-        isGreaterThanOrEqualTo: _$NestedPerFieldToJson
-            .nullableEnumList(isGreaterThanOrEqualTo! as List<TestEnum>?),
+        isEqualTo: isEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumList(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumList(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$NestedPerFieldToJson.nullableEnumList(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumList(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$NestedPerFieldToJson.nullableEnumList(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$NestedPerFieldToJson.nullableEnumList(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        arrayContains: _$NestedPerFieldToJson
-            .nullableEnumList(arrayContains! as List<TestEnum>?),
+        arrayContains: arrayContains != null
+            ? _$NestedPerFieldToJson.nullableEnumList(arrayContains)
+            : null,
         arrayContainsAny: arrayContainsAny
-            ?.map((e) =>
-                _$NestedPerFieldToJson.nullableEnumList(e! as List<TestEnum>?))
+            ?.map((e) => _$NestedPerFieldToJson.nullableEnumList)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -5145,7 +5221,7 @@ class _$OptionalJsonDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$OptionalJsonFieldMap['value']!:
-            _$OptionalJsonPerFieldToJson.value(value! as int),
+            _$OptionalJsonPerFieldToJson.value(value as int),
       if (valueFieldValue != null)
         _$OptionalJsonFieldMap['value']!: valueFieldValue,
     };
@@ -5165,7 +5241,7 @@ class _$OptionalJsonDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$OptionalJsonFieldMap['value']!:
-            _$OptionalJsonPerFieldToJson.value(value! as int),
+            _$OptionalJsonPerFieldToJson.value(value as int),
       if (valueFieldValue != null)
         _$OptionalJsonFieldMap['value']!: valueFieldValue,
     };
@@ -5502,22 +5578,29 @@ class _$OptionalJsonQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$OptionalJsonFieldMap['value']!,
-        isEqualTo: _$OptionalJsonPerFieldToJson.value(isEqualTo! as int),
-        isNotEqualTo: _$OptionalJsonPerFieldToJson.value(isNotEqualTo! as int),
-        isLessThan: _$OptionalJsonPerFieldToJson.value(isLessThan! as int),
-        isLessThanOrEqualTo:
-            _$OptionalJsonPerFieldToJson.value(isLessThanOrEqualTo! as int),
-        isGreaterThan:
-            _$OptionalJsonPerFieldToJson.value(isGreaterThan! as int),
-        isGreaterThanOrEqualTo:
-            _$OptionalJsonPerFieldToJson.value(isGreaterThanOrEqualTo! as int),
+        isEqualTo: isEqualTo != null
+            ? _$OptionalJsonPerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$OptionalJsonPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$OptionalJsonPerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$OptionalJsonPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$OptionalJsonPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$OptionalJsonPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$OptionalJsonPerFieldToJson.value(e! as int))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$OptionalJsonPerFieldToJson.value(e! as int))
-            .toList(),
+        whereIn:
+            whereIn?.map((e) => _$OptionalJsonPerFieldToJson.value).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$OptionalJsonPerFieldToJson.value).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -5928,7 +6011,7 @@ class _$MixedJsonDocumentReference
     final json = {
       if (value != _sentinel)
         _$MixedJsonFieldMap['value']!:
-            _$MixedJsonPerFieldToJson.value(value! as int),
+            _$MixedJsonPerFieldToJson.value(value as int),
       if (valueFieldValue != null)
         _$MixedJsonFieldMap['value']!: valueFieldValue,
     };
@@ -5948,7 +6031,7 @@ class _$MixedJsonDocumentReference
     final json = {
       if (value != _sentinel)
         _$MixedJsonFieldMap['value']!:
-            _$MixedJsonPerFieldToJson.value(value! as int),
+            _$MixedJsonPerFieldToJson.value(value as int),
       if (valueFieldValue != null)
         _$MixedJsonFieldMap['value']!: valueFieldValue,
     };
@@ -6282,21 +6365,28 @@ class _$MixedJsonQuery extends QueryReference<MixedJson, MixedJsonQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$MixedJsonFieldMap['value']!,
-        isEqualTo: _$MixedJsonPerFieldToJson.value(isEqualTo! as int),
-        isNotEqualTo: _$MixedJsonPerFieldToJson.value(isNotEqualTo! as int),
-        isLessThan: _$MixedJsonPerFieldToJson.value(isLessThan! as int),
-        isLessThanOrEqualTo:
-            _$MixedJsonPerFieldToJson.value(isLessThanOrEqualTo! as int),
-        isGreaterThan: _$MixedJsonPerFieldToJson.value(isGreaterThan! as int),
-        isGreaterThanOrEqualTo:
-            _$MixedJsonPerFieldToJson.value(isGreaterThanOrEqualTo! as int),
+        isEqualTo: isEqualTo != null
+            ? _$MixedJsonPerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$MixedJsonPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$MixedJsonPerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$MixedJsonPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$MixedJsonPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$MixedJsonPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$MixedJsonPerFieldToJson.value(e! as int))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$MixedJsonPerFieldToJson.value(e! as int))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$MixedJsonPerFieldToJson.value).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$MixedJsonPerFieldToJson.value).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -6753,12 +6843,12 @@ class _$RootDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$RootFieldMap['nonNullable']!:
-            _$RootPerFieldToJson.nonNullable(nonNullable! as String),
+            _$RootPerFieldToJson.nonNullable(nonNullable as String),
       if (nonNullableFieldValue != null)
         _$RootFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$RootFieldMap['nullable']!:
-            _$RootPerFieldToJson.nullable(nullable! as int?),
+            _$RootPerFieldToJson.nullable(nullable as int?),
       if (nullableFieldValue != null)
         _$RootFieldMap['nullable']!: nullableFieldValue,
     };
@@ -6784,12 +6874,12 @@ class _$RootDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$RootFieldMap['nonNullable']!:
-            _$RootPerFieldToJson.nonNullable(nonNullable! as String),
+            _$RootPerFieldToJson.nonNullable(nonNullable as String),
       if (nonNullableFieldValue != null)
         _$RootFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$RootFieldMap['nullable']!:
-            _$RootPerFieldToJson.nullable(nullable! as int?),
+            _$RootPerFieldToJson.nullable(nullable as int?),
       if (nullableFieldValue != null)
         _$RootFieldMap['nullable']!: nullableFieldValue,
     };
@@ -7143,22 +7233,28 @@ class _$RootQuery extends QueryReference<Root, RootQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$RootFieldMap['nonNullable']!,
-        isEqualTo: _$RootPerFieldToJson.nonNullable(isEqualTo! as String),
-        isNotEqualTo: _$RootPerFieldToJson.nonNullable(isNotEqualTo! as String),
-        isLessThan: _$RootPerFieldToJson.nonNullable(isLessThan! as String),
-        isLessThanOrEqualTo:
-            _$RootPerFieldToJson.nonNullable(isLessThanOrEqualTo! as String),
-        isGreaterThan:
-            _$RootPerFieldToJson.nonNullable(isGreaterThan! as String),
-        isGreaterThanOrEqualTo:
-            _$RootPerFieldToJson.nonNullable(isGreaterThanOrEqualTo! as String),
+        isEqualTo: isEqualTo != null
+            ? _$RootPerFieldToJson.nonNullable(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$RootPerFieldToJson.nonNullable(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$RootPerFieldToJson.nonNullable(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$RootPerFieldToJson.nonNullable(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$RootPerFieldToJson.nonNullable(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$RootPerFieldToJson.nonNullable(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$RootPerFieldToJson.nonNullable(e! as String))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$RootPerFieldToJson.nonNullable(e! as String))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$RootPerFieldToJson.nonNullable).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$RootPerFieldToJson.nonNullable).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -7179,21 +7275,27 @@ class _$RootQuery extends QueryReference<Root, RootQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$RootFieldMap['nullable']!,
-        isEqualTo: _$RootPerFieldToJson.nullable(isEqualTo! as int?),
-        isNotEqualTo: _$RootPerFieldToJson.nullable(isNotEqualTo! as int?),
-        isLessThan: _$RootPerFieldToJson.nullable(isLessThan! as int?),
-        isLessThanOrEqualTo:
-            _$RootPerFieldToJson.nullable(isLessThanOrEqualTo! as int?),
-        isGreaterThan: _$RootPerFieldToJson.nullable(isGreaterThan! as int?),
-        isGreaterThanOrEqualTo:
-            _$RootPerFieldToJson.nullable(isGreaterThanOrEqualTo! as int?),
+        isEqualTo:
+            isEqualTo != null ? _$RootPerFieldToJson.nullable(isEqualTo) : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$RootPerFieldToJson.nullable(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$RootPerFieldToJson.nullable(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$RootPerFieldToJson.nullable(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$RootPerFieldToJson.nullable(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$RootPerFieldToJson.nullable(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$RootPerFieldToJson.nullable(e! as int?))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$RootPerFieldToJson.nullable(e! as int?))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$RootPerFieldToJson.nullable).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$RootPerFieldToJson.nullable).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -7698,12 +7800,12 @@ class _$SubDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$SubFieldMap['nonNullable']!:
-            _$SubPerFieldToJson.nonNullable(nonNullable! as String),
+            _$SubPerFieldToJson.nonNullable(nonNullable as String),
       if (nonNullableFieldValue != null)
         _$SubFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$SubFieldMap['nullable']!:
-            _$SubPerFieldToJson.nullable(nullable! as int?),
+            _$SubPerFieldToJson.nullable(nullable as int?),
       if (nullableFieldValue != null)
         _$SubFieldMap['nullable']!: nullableFieldValue,
     };
@@ -7729,12 +7831,12 @@ class _$SubDocumentReference
     final json = {
       if (nonNullable != _sentinel)
         _$SubFieldMap['nonNullable']!:
-            _$SubPerFieldToJson.nonNullable(nonNullable! as String),
+            _$SubPerFieldToJson.nonNullable(nonNullable as String),
       if (nonNullableFieldValue != null)
         _$SubFieldMap['nonNullable']!: nonNullableFieldValue,
       if (nullable != _sentinel)
         _$SubFieldMap['nullable']!:
-            _$SubPerFieldToJson.nullable(nullable! as int?),
+            _$SubPerFieldToJson.nullable(nullable as int?),
       if (nullableFieldValue != null)
         _$SubFieldMap['nullable']!: nullableFieldValue,
     };
@@ -8088,22 +8190,28 @@ class _$SubQuery extends QueryReference<Sub, SubQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$SubFieldMap['nonNullable']!,
-        isEqualTo: _$SubPerFieldToJson.nonNullable(isEqualTo! as String),
-        isNotEqualTo: _$SubPerFieldToJson.nonNullable(isNotEqualTo! as String),
-        isLessThan: _$SubPerFieldToJson.nonNullable(isLessThan! as String),
-        isLessThanOrEqualTo:
-            _$SubPerFieldToJson.nonNullable(isLessThanOrEqualTo! as String),
-        isGreaterThan:
-            _$SubPerFieldToJson.nonNullable(isGreaterThan! as String),
-        isGreaterThanOrEqualTo:
-            _$SubPerFieldToJson.nonNullable(isGreaterThanOrEqualTo! as String),
+        isEqualTo: isEqualTo != null
+            ? _$SubPerFieldToJson.nonNullable(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$SubPerFieldToJson.nonNullable(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$SubPerFieldToJson.nonNullable(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$SubPerFieldToJson.nonNullable(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$SubPerFieldToJson.nonNullable(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$SubPerFieldToJson.nonNullable(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$SubPerFieldToJson.nonNullable(e! as String))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$SubPerFieldToJson.nonNullable(e! as String))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$SubPerFieldToJson.nonNullable).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$SubPerFieldToJson.nonNullable).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -8124,21 +8232,27 @@ class _$SubQuery extends QueryReference<Sub, SubQuerySnapshot>
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$SubFieldMap['nullable']!,
-        isEqualTo: _$SubPerFieldToJson.nullable(isEqualTo! as int?),
-        isNotEqualTo: _$SubPerFieldToJson.nullable(isNotEqualTo! as int?),
-        isLessThan: _$SubPerFieldToJson.nullable(isLessThan! as int?),
-        isLessThanOrEqualTo:
-            _$SubPerFieldToJson.nullable(isLessThanOrEqualTo! as int?),
-        isGreaterThan: _$SubPerFieldToJson.nullable(isGreaterThan! as int?),
-        isGreaterThanOrEqualTo:
-            _$SubPerFieldToJson.nullable(isGreaterThanOrEqualTo! as int?),
+        isEqualTo:
+            isEqualTo != null ? _$SubPerFieldToJson.nullable(isEqualTo) : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$SubPerFieldToJson.nullable(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$SubPerFieldToJson.nullable(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$SubPerFieldToJson.nullable(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$SubPerFieldToJson.nullable(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$SubPerFieldToJson.nullable(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$SubPerFieldToJson.nullable(e! as int?))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$SubPerFieldToJson.nullable(e! as int?))
-            .toList(),
+        whereIn: whereIn?.map((e) => _$SubPerFieldToJson.nullable).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$SubPerFieldToJson.nullable).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -8638,7 +8752,7 @@ class _$AsCamelCaseDocumentReference
     final json = {
       if (value != _sentinel)
         _$AsCamelCaseFieldMap['value']!:
-            _$AsCamelCasePerFieldToJson.value(value! as num),
+            _$AsCamelCasePerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$AsCamelCaseFieldMap['value']!: valueFieldValue,
     };
@@ -8658,7 +8772,7 @@ class _$AsCamelCaseDocumentReference
     final json = {
       if (value != _sentinel)
         _$AsCamelCaseFieldMap['value']!:
-            _$AsCamelCasePerFieldToJson.value(value! as num),
+            _$AsCamelCasePerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$AsCamelCaseFieldMap['value']!: valueFieldValue,
     };
@@ -8995,21 +9109,29 @@ class _$AsCamelCaseQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$AsCamelCaseFieldMap['value']!,
-        isEqualTo: _$AsCamelCasePerFieldToJson.value(isEqualTo! as num),
-        isNotEqualTo: _$AsCamelCasePerFieldToJson.value(isNotEqualTo! as num),
-        isLessThan: _$AsCamelCasePerFieldToJson.value(isLessThan! as num),
-        isLessThanOrEqualTo:
-            _$AsCamelCasePerFieldToJson.value(isLessThanOrEqualTo! as num),
-        isGreaterThan: _$AsCamelCasePerFieldToJson.value(isGreaterThan! as num),
-        isGreaterThanOrEqualTo:
-            _$AsCamelCasePerFieldToJson.value(isGreaterThanOrEqualTo! as num),
+        isEqualTo: isEqualTo != null
+            ? _$AsCamelCasePerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$AsCamelCasePerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$AsCamelCasePerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$AsCamelCasePerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$AsCamelCasePerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$AsCamelCasePerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$AsCamelCasePerFieldToJson.value(e! as num))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$AsCamelCasePerFieldToJson.value(e! as num))
-            .toList(),
+        whereIn:
+            whereIn?.map((e) => _$AsCamelCasePerFieldToJson.value).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$AsCamelCasePerFieldToJson.value).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -9443,7 +9565,7 @@ class _$CustomSubNameDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomSubNameFieldMap['value']!:
-            _$CustomSubNamePerFieldToJson.value(value! as num),
+            _$CustomSubNamePerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$CustomSubNameFieldMap['value']!: valueFieldValue,
     };
@@ -9463,7 +9585,7 @@ class _$CustomSubNameDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomSubNameFieldMap['value']!:
-            _$CustomSubNamePerFieldToJson.value(value! as num),
+            _$CustomSubNamePerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$CustomSubNameFieldMap['value']!: valueFieldValue,
     };
@@ -9800,21 +9922,29 @@ class _$CustomSubNameQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$CustomSubNameFieldMap['value']!,
-        isEqualTo: _$CustomSubNamePerFieldToJson.value(isEqualTo! as num),
-        isNotEqualTo: _$CustomSubNamePerFieldToJson.value(isNotEqualTo! as num),
-        isLessThan: _$CustomSubNamePerFieldToJson.value(isLessThan! as num),
-        isLessThanOrEqualTo:
-            _$CustomSubNamePerFieldToJson.value(isLessThanOrEqualTo! as num),
-        isGreaterThan:
-            _$CustomSubNamePerFieldToJson.value(isGreaterThan! as num),
-        isGreaterThanOrEqualTo:
-            _$CustomSubNamePerFieldToJson.value(isGreaterThanOrEqualTo! as num),
+        isEqualTo: isEqualTo != null
+            ? _$CustomSubNamePerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$CustomSubNamePerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$CustomSubNamePerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$CustomSubNamePerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$CustomSubNamePerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$CustomSubNamePerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$CustomSubNamePerFieldToJson.value(e! as num))
-            .toList(),
+        whereIn:
+            whereIn?.map((e) => _$CustomSubNamePerFieldToJson.value).toList(),
         whereNotIn: whereNotIn
-            ?.map((e) => _$CustomSubNamePerFieldToJson.value(e! as num))
+            ?.map((e) => _$CustomSubNamePerFieldToJson.value)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -10253,7 +10383,7 @@ class _$ThisIsACustomPrefixDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomClassPrefixFieldMap['value']!:
-            _$CustomClassPrefixPerFieldToJson.value(value! as num),
+            _$CustomClassPrefixPerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$CustomClassPrefixFieldMap['value']!: valueFieldValue,
     };
@@ -10273,7 +10403,7 @@ class _$ThisIsACustomPrefixDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$CustomClassPrefixFieldMap['value']!:
-            _$CustomClassPrefixPerFieldToJson.value(value! as num),
+            _$CustomClassPrefixPerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$CustomClassPrefixFieldMap['value']!: valueFieldValue,
     };
@@ -10612,22 +10742,30 @@ class _$ThisIsACustomPrefixQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$CustomClassPrefixFieldMap['value']!,
-        isEqualTo: _$CustomClassPrefixPerFieldToJson.value(isEqualTo! as num),
-        isNotEqualTo:
-            _$CustomClassPrefixPerFieldToJson.value(isNotEqualTo! as num),
-        isLessThan: _$CustomClassPrefixPerFieldToJson.value(isLessThan! as num),
-        isLessThanOrEqualTo: _$CustomClassPrefixPerFieldToJson
-            .value(isLessThanOrEqualTo! as num),
-        isGreaterThan:
-            _$CustomClassPrefixPerFieldToJson.value(isGreaterThan! as num),
-        isGreaterThanOrEqualTo: _$CustomClassPrefixPerFieldToJson
-            .value(isGreaterThanOrEqualTo! as num),
+        isEqualTo: isEqualTo != null
+            ? _$CustomClassPrefixPerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$CustomClassPrefixPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$CustomClassPrefixPerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$CustomClassPrefixPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$CustomClassPrefixPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$CustomClassPrefixPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
         whereIn: whereIn
-            ?.map((e) => _$CustomClassPrefixPerFieldToJson.value(e! as num))
+            ?.map((e) => _$CustomClassPrefixPerFieldToJson.value)
             .toList(),
         whereNotIn: whereNotIn
-            ?.map((e) => _$CustomClassPrefixPerFieldToJson.value(e! as num))
+            ?.map((e) => _$CustomClassPrefixPerFieldToJson.value)
             .toList(),
       ),
       $queryCursor: $queryCursor,
@@ -11055,7 +11193,7 @@ class _$ExplicitPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitPathFieldMap['value']!:
-            _$ExplicitPathPerFieldToJson.value(value! as num),
+            _$ExplicitPathPerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$ExplicitPathFieldMap['value']!: valueFieldValue,
     };
@@ -11075,7 +11213,7 @@ class _$ExplicitPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitPathFieldMap['value']!:
-            _$ExplicitPathPerFieldToJson.value(value! as num),
+            _$ExplicitPathPerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$ExplicitPathFieldMap['value']!: valueFieldValue,
     };
@@ -11412,22 +11550,29 @@ class _$ExplicitPathQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ExplicitPathFieldMap['value']!,
-        isEqualTo: _$ExplicitPathPerFieldToJson.value(isEqualTo! as num),
-        isNotEqualTo: _$ExplicitPathPerFieldToJson.value(isNotEqualTo! as num),
-        isLessThan: _$ExplicitPathPerFieldToJson.value(isLessThan! as num),
-        isLessThanOrEqualTo:
-            _$ExplicitPathPerFieldToJson.value(isLessThanOrEqualTo! as num),
-        isGreaterThan:
-            _$ExplicitPathPerFieldToJson.value(isGreaterThan! as num),
-        isGreaterThanOrEqualTo:
-            _$ExplicitPathPerFieldToJson.value(isGreaterThanOrEqualTo! as num),
+        isEqualTo: isEqualTo != null
+            ? _$ExplicitPathPerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$ExplicitPathPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$ExplicitPathPerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$ExplicitPathPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$ExplicitPathPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$ExplicitPathPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$ExplicitPathPerFieldToJson.value(e! as num))
-            .toList(),
-        whereNotIn: whereNotIn
-            ?.map((e) => _$ExplicitPathPerFieldToJson.value(e! as num))
-            .toList(),
+        whereIn:
+            whereIn?.map((e) => _$ExplicitPathPerFieldToJson.value).toList(),
+        whereNotIn:
+            whereNotIn?.map((e) => _$ExplicitPathPerFieldToJson.value).toList(),
       ),
       $queryCursor: $queryCursor,
     );
@@ -11862,7 +12007,7 @@ class _$ExplicitSubPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitSubPathFieldMap['value']!:
-            _$ExplicitSubPathPerFieldToJson.value(value! as num),
+            _$ExplicitSubPathPerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$ExplicitSubPathFieldMap['value']!: valueFieldValue,
     };
@@ -11882,7 +12027,7 @@ class _$ExplicitSubPathDocumentReference extends FirestoreDocumentReference<
     final json = {
       if (value != _sentinel)
         _$ExplicitSubPathFieldMap['value']!:
-            _$ExplicitSubPathPerFieldToJson.value(value! as num),
+            _$ExplicitSubPathPerFieldToJson.value(value as num),
       if (valueFieldValue != null)
         _$ExplicitSubPathFieldMap['value']!: valueFieldValue,
     };
@@ -12219,22 +12364,29 @@ class _$ExplicitSubPathQuery
       _collection,
       $referenceWithoutCursor: $referenceWithoutCursor.where(
         _$ExplicitSubPathFieldMap['value']!,
-        isEqualTo: _$ExplicitSubPathPerFieldToJson.value(isEqualTo! as num),
-        isNotEqualTo:
-            _$ExplicitSubPathPerFieldToJson.value(isNotEqualTo! as num),
-        isLessThan: _$ExplicitSubPathPerFieldToJson.value(isLessThan! as num),
-        isLessThanOrEqualTo:
-            _$ExplicitSubPathPerFieldToJson.value(isLessThanOrEqualTo! as num),
-        isGreaterThan:
-            _$ExplicitSubPathPerFieldToJson.value(isGreaterThan! as num),
-        isGreaterThanOrEqualTo: _$ExplicitSubPathPerFieldToJson
-            .value(isGreaterThanOrEqualTo! as num),
+        isEqualTo: isEqualTo != null
+            ? _$ExplicitSubPathPerFieldToJson.value(isEqualTo)
+            : null,
+        isNotEqualTo: isNotEqualTo != null
+            ? _$ExplicitSubPathPerFieldToJson.value(isNotEqualTo)
+            : null,
+        isLessThan: isLessThan != null
+            ? _$ExplicitSubPathPerFieldToJson.value(isLessThan)
+            : null,
+        isLessThanOrEqualTo: isLessThanOrEqualTo != null
+            ? _$ExplicitSubPathPerFieldToJson.value(isLessThanOrEqualTo)
+            : null,
+        isGreaterThan: isGreaterThan != null
+            ? _$ExplicitSubPathPerFieldToJson.value(isGreaterThan)
+            : null,
+        isGreaterThanOrEqualTo: isGreaterThanOrEqualTo != null
+            ? _$ExplicitSubPathPerFieldToJson.value(isGreaterThanOrEqualTo)
+            : null,
         isNull: isNull,
-        whereIn: whereIn
-            ?.map((e) => _$ExplicitSubPathPerFieldToJson.value(e! as num))
-            .toList(),
+        whereIn:
+            whereIn?.map((e) => _$ExplicitSubPathPerFieldToJson.value).toList(),
         whereNotIn: whereNotIn
-            ?.map((e) => _$ExplicitSubPathPerFieldToJson.value(e! as num))
+            ?.map((e) => _$ExplicitSubPathPerFieldToJson.value)
             .toList(),
       ),
       $queryCursor: $queryCursor,

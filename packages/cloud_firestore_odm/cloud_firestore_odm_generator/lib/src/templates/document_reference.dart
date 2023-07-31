@@ -107,7 +107,7 @@ void transactionUpdate(Transaction transaction, {${parameters.join()}});
       for (final field in data.updatableFields) ...[
         '''
         if (${field.name} != _sentinel)
-          ${field.field}: ${data.mapParameter(field)},
+          ${field.field}: ${data.mapParameter(field, cast: true)},
         ''',
         '''
         if (${field.name}FieldValue != null)
