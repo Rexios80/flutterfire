@@ -94,6 +94,7 @@ class CollectionData with Names {
     required this.queryableFields,
     required this.fromJson,
     required this.toJson,
+    required this.perFieldToJson,
     required this.idKey,
     required this.libraryElement,
   }) : collectionName =
@@ -230,6 +231,29 @@ represents the content of the collection must be in the same file.
       }
     }
 
+    final perFieldToJson = collectionTargetElement.allMethods
+        .firstWhereOrNull((method) => method.name == 'perFieldToJson');
+    if (!hasJsonSerializable && perFieldToJson == null) {
+      throw InvalidGenerationSourceError(
+        'Used @Collection with the class ${collectionTargetElement.name}, but '
+        'the class has no `perFieldToJson` method.',
+        todo:
+            'Add a `perFieldToJson` method to ${collectionTargetElement.name}',
+        element: annotatedElement,
+      );
+    }
+
+    if (perFieldToJson != null) {
+      if (!perFieldToJson.parameters.single.type.isDartCoreString ||
+          !perFieldToJson.returnType.isDartCoreFunction) {
+        throw InvalidGenerationSourceError(
+          '@Collection was used with the class ${collectionTargetElement.name} but '
+          'its perFieldToJson does not match `Function Function(String)`.',
+          element: annotatedElement,
+        );
+      }
+    }
+
     final data = CollectionData(
       type: type,
       hasFreezed: hasFreezed,
@@ -244,6 +268,15 @@ represents the content of the collection must be in the same file.
       toJson: (value) {
         if (toJson != null) return '$value.toJson()';
         return '_\$${type.toString().public}ToJson($value)';
+      },
+      perFieldToJson: (field) {
+        if (perFieldToJson != null) {
+          return '$type.perFieldToJson($field)';
+        }
+
+        return hasFreezed
+            ? '_\$\$_${type}PerFieldToJson.$field'
+            : '_\$${type}PerFieldToJson.$field';
       },
       idKey: collectionTargetElement
           .allFields(
@@ -358,13 +391,6 @@ represents the content of the collection must be in the same file.
     // TODO filter list other than List<string|bool|num>
   }
 
-  String perFieldToJson(QueryingField field) {
-    final type = this.type.getDisplayString(withNullability: false);
-    return hasFreezed
-        ? '_\$\$_${type}PerFieldToJson.${field.name}'
-        : '_\$${type}PerFieldToJson.${field.name}';
-  }
-
   @override
   final String? collectionPrefix;
   @override
@@ -388,6 +414,7 @@ represents the content of the collection must be in the same file.
 
   String Function(String json) fromJson;
   String Function(String value) toJson;
+  String Function(String field) perFieldToJson;
 
   @override
   String toString() {

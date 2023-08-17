@@ -20,7 +20,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.3.2
-  json_serializable: '>=6.6.1 <7.0.0'
+  json_serializable:
+    path: ../../../../../json_serializable.dart/json_serializable
 
 flutter:
   uses-material-design: false
